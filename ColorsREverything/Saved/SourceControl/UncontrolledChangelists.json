@@ -6,7 +6,9 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"C:/Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Input/Actions/IA_Shoot.uasset",
-				"C:/Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Input/IMC_Default.uasset"
+				"C:/Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Input/IMC_Default.uasset",
+				"C:/Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+				"C:/Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Projectile.uasset"
 			]
 		}
 	]

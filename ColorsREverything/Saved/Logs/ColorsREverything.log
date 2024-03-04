@@ -1101,3 +1101,113 @@ LogConfig: Set CVar [[r.Occlusion.SingleRHIThreadStall:1]]
 [2024.03.04-22.58.05:127][777]LogFileHelpers: InternalPromptForCheckoutAndSave took 184 ms (total: 444 ms)
 [2024.03.04-22.58.05:138][777]AssetCheck: New page: Asset Save: IMC_Default
 [2024.03.04-22.58.05:138][777]LogContentValidation: Display: Validating /Script/EnhancedInput.InputMappingContext /Game/ThirdPerson/Input/IMC_Default.IMC_Default
+[2024.03.04-23.00.28:219][861]LogHttp: Warning: 00000845AAF9AA00: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BDC00AEF9-4309-DA2F-56B1-BAB00C2D942C%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.04-23.00.28:220][861]LogHttp: Warning: 00000845AAF9AA00: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.04-23.00.28:220][861]LogHttp: Warning: 00000845AAF9AA00: libcurl info message cache 0 (Found bundle for host: 0x84553160990 [serially])
+[2024.03.04-23.00.28:220][861]LogHttp: Warning: 00000845AAF9AA00: libcurl info message cache 1 (Re-using existing connection #1 with host datarouter.ol.epicgames.com)
+[2024.03.04-23.00.28:220][861]LogHttp: Warning: 00000845AAF9AA00: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (44.194.74.35) port 443 (#1))
+[2024.03.04-23.00.28:220][861]LogHttp: Warning: 00000845AAF9AA00: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.04-23.00.28:220][861]LogHttp: Warning: 00000845AAF9AA00: libcurl info message cache 4 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.04-23.00.28:220][861]LogHttp: Warning: 00000845AAF9AA00: libcurl info message cache 5 (necessary data rewind wasn't possible)
+[2024.03.04-23.00.28:220][861]LogHttp: Warning: 00000845AAF9AA00: libcurl info message cache 6 (Closing connection 1)
+[2024.03.04-23.00.28:220][861]LogHttp: Warning: 00000845AAF9AA00: libcurl info message cache 7 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.04-23.00.28:220][861]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BDC00AEF9-4309-DA2F-56B1-BAB00C2D942C%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.04-23.02.40:683][ 40]LogSelectionDetails: Warning: NavigateToFunctionSource:  Unable to find source file and line number for 'ACharacter::StopJumping' [Element not found.]
+[2024.03.04-23.02.46:066][242]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.04-23.02.46:350][242]LogSavePackage: Moving output files for package: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter
+[2024.03.04-23.02.46:352][242]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_ThirdPersonCharacter701FEF2F45B43FFACCE9828B8080249E.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset'
+[2024.03.04-23.02.46:381][242]LogFileHelpers: InternalPromptForCheckoutAndSave took 315 ms (total: 759 ms)
+[2024.03.04-23.02.46:399][242]AssetCheck: New page: Asset Save: BP_ThirdPersonCharacter
+[2024.03.04-23.02.46:399][242]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter
+[2024.03.04-23.02.46:795][255]BlueprintLog: New page: Compile BP_ThirdPersonCharacter
+[2024.03.04-23.02.46:998][255]LogUObjectHash: Compacting FUObjectHashTables data took   3.11ms
+[2024.03.04-23.02.50:752][373]LogSlate: Window 'BP_ThirdPersonCharacter' being destroyed
+[2024.03.04-23.02.50:784][373]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
+[2024.03.04-23.02.50:784][373]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.04-23.02.56:330][604]LogEditorClassViewer: Warning: Class /Script/InteractiveToolsFramework.GizmoActor has parent /Script/InteractiveToolsFramework.InternalToolFrameworkActor, but this parent is not found. The Class will not be shown in ClassViewer.
+[2024.03.04-23.02.56:331][604]LogEditorClassViewer: Warning: Class /Script/ModelingComponents.PreviewGeometryActor has parent /Script/InteractiveToolsFramework.InternalToolFrameworkActor, but this parent is not found. The Class will not be shown in ClassViewer.
+[2024.03.04-23.02.56:331][604]LogEditorClassViewer: Warning: Class /Script/ModelingComponents.PreviewMeshActor has parent /Script/InteractiveToolsFramework.InternalToolFrameworkActor, but this parent is not found. The Class will not be shown in ClassViewer.
+[2024.03.04-23.02.59:401][604]LogSlate: Window 'Pick Parent Class' being destroyed
+[2024.03.04-23.02.59:421][604]LogContentBrowser: Deferred new asset file creation: NewBlueprint
+[2024.03.04-23.02.59:429][604]LogContentBrowser: Creating deferred item: NewBlueprint
+[2024.03.04-23.02.59:462][606]LogContentBrowser: Renaming the item being created (Deferred Item: NewBlueprint).
+[2024.03.04-23.03.05:496][898]LogContentBrowser: Attempting asset rename: NewBlueprint -> BP_Projectile
+[2024.03.04-23.03.05:514][898]LogContentBrowser: End creating deferred item NewBlueprint
+[2024.03.04-23.03.09:712][ 80]LogUObjectHash: Compacting FUObjectHashTables data took   3.27ms
+[2024.03.04-23.03.09:723][ 80]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.04-23.03.09:893][ 80]LogSavePackage: Moving output files for package: /Game/Developers/Rohaid/BluePrints/BP_Projectile
+[2024.03.04-23.03.09:893][ 80]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_ProjectileD9CAAFFA4D6DF1F9A38A9EBEC6CD98B8.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Projectile.uasset'
+[2024.03.04-23.03.09:915][ 80]LogFileHelpers: InternalPromptForCheckoutAndSave took 192 ms (total: 951 ms)
+[2024.03.04-23.03.09:927][ 80]AssetCheck: New page: Asset Save: BP_Projectile
+[2024.03.04-23.03.09:927][ 80]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Developers/Rohaid/BluePrints/BP_Projectile.BP_Projectile
+[2024.03.04-23.03.10:983][125]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Developers/Rohaid/BluePrints/BP_Projectile.BP_Projectile
+[2024.03.04-23.03.10:984][125]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.04-23.03.12:207][125]LogViewport: Scene viewport resized to 951x662, mode Windowed.
+[2024.03.04-23.03.30:085][694]LogShaderCompilers: Display: ================================================
+[2024.03.04-23.03.30:085][694]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.03.04-23.03.30:085][694]LogShaderCompilers: Display: Total job queries 128, among them cache hits 5 (3.91%)
+[2024.03.04-23.03.30:085][694]LogShaderCompilers: Display: Tracking 120 distinct input hashes that result in 96 distinct outputs (80.00%)
+[2024.03.04-23.03.30:085][694]LogShaderCompilers: Display: RAM used: 1.03 MB (0.00 GB) of 819.20 MB (0.80 GB) budget. Usage: 0.13%
+[2024.03.04-23.03.30:085][694]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.03.04-23.03.30:085][694]LogShaderCompilers: Display: Shaders Compiled: 120
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display: Jobs assigned 123, completed 120 (97.56%)
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display: Average time worker was idle: 86.34 s
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display: Time job spent in pending queue: average 19.40 s, longest 72.26 s
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display: Job execution time: average 17.76 s, max 49.28 s
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display: Job life time (pending + execution): average 37.64 s, max 76.48
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 101.07 s
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display: Jobs were issued in 85 batches (only local compilation was used), average 1.45 jobs/batch
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display: Average processing rate: 1.19 jobs/sec
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display: Total thread time: 631.66 s
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display: Total thread preprocess time: 34.11 s
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display: Percentage time preprocessing: 5.40%
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display: Effective parallelization: 6.25 (times faster than compiling all shaders on one thread). Compare with number of workers: 8
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display:                                   FCloudRenderViewPS101false (compiled    1 times, average 18.98 sec, max 18.98 sec, min 18.98 sec)
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display: TBasePassPSFPrecomputedVolumetricLightmapLightingPolicySkylight (compiled    1 times, average 11.93 sec, max 11.93 sec, min 11.93 sec)
+[2024.03.04-23.03.30:086][694]LogShaderCompilers: Display:                TBasePassVSFCachedPointIndirectLightingPolicy (compiled    1 times, average 11.23 sec, max 11.23 sec, min 11.23 sec)
+[2024.03.04-23.03.30:087][694]LogShaderCompilers: Display:                                   FCloudRenderViewPS011false (compiled    1 times, average 9.94 sec, max 9.94 sec, min 9.94 sec)
+[2024.03.04-23.03.30:087][694]LogShaderCompilers: Display:                    TVoxelizeVolumeVS<VMode_Primitive_Sphere> (compiled    1 times, average 8.62 sec, max 8.62 sec, min 8.62 sec)
+[2024.03.04-23.03.30:087][694]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2024.03.04-23.03.30:087][694]LogShaderCompilers: Display:                           FRenderVolumetricCloudRenderViewCS - 21.00% of total time (compiled   17 times, average 7.80 sec, max 12.14 sec, min 4.62 sec)
+[2024.03.04-23.03.30:087][694]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 15.22% of total time (compiled   16 times, average 6.01 sec, max 10.39 sec, min 3.73 sec)
+[2024.03.04-23.03.30:087][694]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 11.98% of total time (compiled   16 times, average 4.73 sec, max 6.13 sec, min 3.22 sec)
+[2024.03.04-23.03.30:087][694]LogShaderCompilers: Display:                                                 FLumenCardVS - 7.62% of total time (compiled   11 times, average 4.38 sec, max 6.12 sec, min 2.27 sec)
+[2024.03.04-23.03.30:087][694]LogShaderCompilers: Display:                                          FLumenCardPS<false> - 6.47% of total time (compiled   12 times, average 3.40 sec, max 5.98 sec, min 1.66 sec)
+[2024.03.04-23.03.30:087][694]LogShaderCompilers: Display: ================================================
+[2024.03.04-23.03.30:708][707]LogSubobjectSubsystem: Warning: Cannot remove subobject 'DefaultSceneRoot' because it is the default scene root!
+[2024.03.04-23.04.25:287][286]LogUObjectHash: Compacting FUObjectHashTables data took   4.09ms
+[2024.03.04-23.04.25:290][286]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/ThirdPerson/Maps/ThirdPersonMap' took 0.109
+[2024.03.04-23.04.25:295][286]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Developers/Rohaid/BluePrints/BP_Projectile] ([2] browsable assets)...
+[2024.03.04-23.04.25:330][286]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Developers/Rohaid/BluePrints/BP_Projectile.BP_Projectile]
+[2024.03.04-23.04.25:330][286]OBJ SavePackage: Finished generating thumbnails for package [/Game/Developers/Rohaid/BluePrints/BP_Projectile]
+[2024.03.04-23.04.25:336][286]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Developers/Rohaid/BluePrints/BP_Projectile_Auto1
+[2024.03.04-23.04.25:336][286]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_Projectile_Auto13ADE45E641FAC0340E6DA49B2D08E901.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/Autosaves/Game/Developers/Rohaid/BluePrints/BP_Projectile_Auto1.uasset'
+[2024.03.04-23.04.25:339][286]LogFileHelpers: Auto-saving content packages took 0.048
+[2024.03.04-23.04.41:536][438]BlueprintLog: New page: Compile BP_Projectile
+[2024.03.04-23.04.41:686][438]LogUObjectHash: Compacting FUObjectHashTables data took   3.52ms
+[2024.03.04-23.04.42:313][450]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.04-23.04.42:522][450]LogSavePackage: Moving output files for package: /Game/Developers/Rohaid/BluePrints/BP_Projectile
+[2024.03.04-23.04.42:524][450]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_Projectile93ED33AF48D56E1D007C08BC3A2EFB0C.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Projectile.uasset'
+[2024.03.04-23.04.42:543][450]LogFileHelpers: InternalPromptForCheckoutAndSave took 231 ms (total: 1.18 sec)
+[2024.03.04-23.04.42:556][450]AssetCheck: New page: Asset Save: BP_Projectile
+[2024.03.04-23.04.42:556][450]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Developers/Rohaid/BluePrints/BP_Projectile.BP_Projectile
+[2024.03.04-23.04.52:192][771]BlueprintLog: New page: Compile BP_Projectile
+[2024.03.04-23.04.52:327][771]LogUObjectHash: Compacting FUObjectHashTables data took   4.17ms
+[2024.03.04-23.04.53:039][786]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.04-23.04.53:256][786]LogSavePackage: Moving output files for package: /Game/Developers/Rohaid/BluePrints/BP_Projectile
+[2024.03.04-23.04.53:259][786]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_ProjectileB9F11A664624D5EA1B1DE29F04BF6A61.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Projectile.uasset'
+[2024.03.04-23.04.53:284][786]LogFileHelpers: InternalPromptForCheckoutAndSave took 245 ms (total: 1.42 sec)
+[2024.03.04-23.04.53:298][786]AssetCheck: New page: Asset Save: BP_Projectile
+[2024.03.04-23.04.53:298][786]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Developers/Rohaid/BluePrints/BP_Projectile.BP_Projectile
+[2024.03.04-23.05.27:086][  5]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.04-23.05.27:338][  5]LogSavePackage: Moving output files for package: /Game/Developers/Rohaid/BluePrints/BP_Projectile
+[2024.03.04-23.05.27:340][  5]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_Projectile740FE520484DAC87660BC4AF9C812EDA.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Projectile.uasset'
+[2024.03.04-23.05.27:360][  5]LogFileHelpers: InternalPromptForCheckoutAndSave took 274 ms (total: 1.70 sec)
+[2024.03.04-23.05.27:378][  5]AssetCheck: New page: Asset Save: BP_Projectile
+[2024.03.04-23.05.27:378][  5]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Developers/Rohaid/BluePrints/BP_Projectile.BP_Projectile
+[2024.03.04-23.05.28:926][ 51]BlueprintLog: New page: Compile BP_Projectile
+[2024.03.04-23.05.29:074][ 51]LogUObjectHash: Compacting FUObjectHashTables data took   3.82ms
+[2024.03.04-23.05.30:914][108]LogSlate: Window 'BP_Projectile' being destroyed
+[2024.03.04-23.05.30:950][108]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2024.03.04-23.05.30:950][108]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
