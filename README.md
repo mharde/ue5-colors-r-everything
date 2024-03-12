@@ -1,5 +1,6 @@
 # ue5-colors-r-everything
-Colors are Everything Feature Jam Mar 2024: Raleigh Unreal Meetup
+Raleigh Unreal Meetup
+Colors are Everything Feature Jam Mar 2024
 Contributors:
 * Carlos Carrera
 * David Riley
