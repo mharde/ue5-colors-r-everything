@@ -5,6 +5,11 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"D:/Unreal/ColorsREverything/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+				"D:/Unreal/ColorsREverything/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Projectile.uasset",
+				"D:/Unreal/ColorsREverything/ue5-colors-r-everything/ColorsREverything/Content/CuteCreature/Animations/Anim_Shoot.uasset",
+				"D:/Unreal/ColorsREverything/ue5-colors-r-everything/ColorsREverything/Content/CuteCreature/Animations/CuteCreature_Skeleton_Sequence.uasset",
+				"D:/Unreal/ColorsREverything/ue5-colors-r-everything/ColorsREverything/Content/CuteCreature/Animations/ABP_CuteCreature.uasset",
 				"C:/Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Input/IMC_Default.uasset",
 				"C:/Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Input/Actions/IA_Choose.uasset",
 				"C:/Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Input/Actions/IA_RedSelect.uasset",
@@ -18,9 +23,7 @@
 				"C:/Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Red_Projectile.uasset",
 				"C:/Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/Textures/Red_Projectile_Material_Inst.uasset",
 				"C:/Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Yellow_Projectile.uasset",
-				"C:/Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/Textures/Yellow_Projectile_Material_Inst.uasset",
-				"D:/Unreal/ColorsREverything/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
-				"D:/Unreal/ColorsREverything/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Projectile.uasset"
+				"C:/Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/Textures/Yellow_Projectile_Material_Inst.uasset"
 			]
 		}
 	]
