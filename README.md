@@ -6,4 +6,4 @@ Raleigh Unreal Meetup
 * David Riley
 * Rohaid Bakheet
 * Maggie H.
-* Colin
+
