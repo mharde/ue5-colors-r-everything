@@ -1,4 +1,4 @@
-﻿Log file open, 03/17/24 19:50:44
+Log file open, 03/17/24 19:50:44
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=0)
 LogWindows: File 'aqProf.dll' does not exist
 LogProfilingDebugging: Loading WinPixEventRuntime.dll for PIX profiling (from ../../../Engine/Binaries/ThirdParty/Windows/WinPixEventRuntime/x64).
@@ -43,6 +43,7 @@ LogPluginManager: Mounting Engine plugin Bridge
 LogPluginManager: Mounting Engine plugin EnhancedInput
 LogPluginManager: Mounting Engine plugin FastBuildController
 LogPluginManager: Mounting Engine plugin MeshPainting
+LogPluginManager: Mounting Engine plugin XGEController
 LogPluginManager: Mounting Engine plugin TraceUtilities
 LogPluginManager: Mounting Engine plugin XGEController
 LogPluginManager: Mounting Engine plugin AISupport
@@ -115,15 +116,18 @@ LogPluginManager: Mounting Engine plugin LinuxDeviceProfileSelector
 LogPluginManager: Mounting Engine plugin LocationServicesBPLibrary
 LogPluginManager: Mounting Engine plugin MeshModelingToolset
 LogPluginManager: Mounting Engine plugin Metasound
+LogPluginManager: Mounting Engine plugin ChunkDownloader
 LogPluginManager: Mounting Engine plugin MobilePatchingUtils
 LogPluginManager: Mounting Engine plugin ProceduralMeshComponent
 LogPluginManager: Mounting Engine plugin PropertyAccessEditor
-LogPluginManager: Mounting Engine plugin ResonanceAudio
 LogPluginManager: Mounting Engine plugin SignificanceManager
+LogPluginManager: Mounting Engine plugin ResonanceAudio
 LogPluginManager: Mounting Engine plugin SoundFields
 LogPluginManager: Mounting Engine plugin Synthesis
 LogPluginManager: Mounting Engine plugin WaveTable
+LogPluginManager: Mounting Engine plugin CryptoKeys
 LogPluginManager: Mounting Engine plugin WebMMoviePlayer
+LogPluginManager: Mounting Engine plugin WindowsMoviePlayer
 LogPluginManager: Mounting Engine plugin WindowsDeviceProfileSelector
 LogPluginManager: Mounting Engine plugin WindowsMoviePlayer
 LogPluginManager: Mounting Engine plugin OnlineBase
@@ -229,6 +233,7 @@ LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experim
 LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/MeshLODToolset/Content/' mounted to '/MeshLODToolset/'
 LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/MeshModelingToolsetExp/Content/' mounted to '/MeshModelingToolsetExp/'
 LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/PythonScriptPlugin/Content/' mounted to '/PythonScriptPlugin/'
+LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/Dataflow/Content/' mounted to '/Dataflow/'
 LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Experimental/UVEditor/Content/' mounted to '/UVEditor/'
 LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Enterprise/DatasmithContent/Content/' mounted to '/DatasmithContent/'
 LogPackageName: Display: FPackageName: Mount point added: '../../Plugins/Enterprise/GLTFExporter/Content/' mounted to '/GLTFExporter/'
@@ -2084,3 +2089,1149 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2024.03.18-00.14.09:111][643]LogD3D12RHI: ~FD3D12DynamicRHI
 [2024.03.18-00.14.09:137][643]LogExit: Exiting.
 [2024.03.18-00.14.09:145][643]Log file closed, 03/17/24 20:14:09
+
+Script Stack (0 frames) :
+
+[2024.03.17-17.01.45:387][221]LogStats: FPlatformStackWalk::StackWalkAndDump -  0.186 s
+[2024.03.17-17.01.45:387][221]LogOutputDevice: Error: === Handled ensure: ===
+[2024.03.17-17.01.45:387][221]LogOutputDevice: Error: 
+[2024.03.17-17.01.45:387][221]LogOutputDevice: Error: Ensure condition failed: !bGraphDataInvalid  [File:D:\build\++UE5\Sync\Engine\Source\Editor\GraphEditor\Private\SGraphPin.cpp] [Line: 905] 
+[2024.03.17-17.01.45:387][221]LogOutputDevice: Error: The Graph Pin Object has been invalidated. Someone is keeping a hard ref on the SGraphPin (SGraphPinNum<double> [NodeFactory.cpp(322)]). See InvalidateGraphData for more info
+[2024.03.17-17.01.45:387][221]LogOutputDevice: Error: Stack: 
+[2024.03.17-17.01.45:387][221]LogOutputDevice: Error: [Callstack] 0x00007ffb70a9ada1 UnrealEditor-GraphEditor.dll!UnknownFunction []
+[2024.03.17-17.01.45:387][221]LogOutputDevice: Error: [Callstack] 0x00007ffb70a9e452 UnrealEditor-GraphEditor.dll!UnknownFunction []
+[2024.03.17-17.01.45:387][221]LogOutputDevice: Error: [Callstack] 0x00007ffb7a66d017 UnrealEditor-Slate.dll!UnknownFunction []
+[2024.03.17-17.01.45:387][221]LogOutputDevice: Error: [Callstack] 0x00007ffb7a6c6cca UnrealEditor-Slate.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffb7a66e537 UnrealEditor-Slate.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffb7a6d4fa4 UnrealEditor-Slate.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffb7a6c4cb1 UnrealEditor-Slate.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffb7a6baae8 UnrealEditor-Slate.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffb81b81a18 UnrealEditor-ApplicationCore.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffb81b667d1 UnrealEditor-ApplicationCore.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffb81b84391 UnrealEditor-ApplicationCore.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffb81b5ff93 UnrealEditor-ApplicationCore.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffc3e93ef75 USER32.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffc3e93e9ee USER32.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffb4c2a7f09 InkObj.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffbff471028 atlthunk.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffc3e93ef75 USER32.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffc3e93e69d USER32.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffb81b85849 UnrealEditor-ApplicationCore.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ff7d0b67332 UnrealEditor.exe!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ff7d0b8287d UnrealEditor.exe!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ff7d0b8296a UnrealEditor.exe!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ff7d0b85680 UnrealEditor.exe!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ff7d0b971b4 UnrealEditor.exe!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ff7d0b9a516 UnrealEditor.exe!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffc3cd07344 KERNEL32.DLL!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: [Callstack] 0x00007ffc3eb626b1 ntdll.dll!UnknownFunction []
+[2024.03.17-17.01.45:388][221]LogOutputDevice: Error: 
+[2024.03.17-17.01.45:398][221]LogStats:                SubmitErrorReport -  0.000 s
+[2024.03.17-17.01.48:885][221]LogStats:                    SendNewReport -  3.488 s
+[2024.03.17-17.01.48:885][221]LogStats:             FDebug::EnsureFailed -  3.696 s
+[2024.03.17-17.02.07:683][283]LogHttp: Warning: 000006D77AF27300: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.02.07:683][283]LogHttp: Warning: 000006D77AF27300: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.02.07:683][283]LogHttp: Warning: 000006D77AF27300: libcurl info message cache 0 (Found bundle for host: 0x6d716970ab0 [serially])
+[2024.03.17-17.02.07:683][283]LogHttp: Warning: 000006D77AF27300: libcurl info message cache 1 (Re-using existing connection #14 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.02.07:683][283]LogHttp: Warning: 000006D77AF27300: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (34.237.233.119) port 443 (#14))
+[2024.03.17-17.02.07:683][283]LogHttp: Warning: 000006D77AF27300: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.02.07:683][283]LogHttp: Warning: 000006D77AF27300: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-17.02.07:683][283]LogHttp: Warning: 000006D77AF27300: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.02.07:683][283]LogHttp: Warning: 000006D77AF27300: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-17.02.07:683][283]LogHttp: Warning: 000006D77AF27300: libcurl info message cache 7 (Closing connection 14)
+[2024.03.17-17.02.07:683][283]LogHttp: Warning: 000006D77AF27300: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.02.07:683][283]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-17.02.35:671][797]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.17-17.02.35:916][797]LogSavePackage: Moving output files for package: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter
+[2024.03.17-17.02.35:918][797]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_ThirdPersonCharacter81ACE4EB42043D1DA09E82BB329B6335.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset'
+[2024.03.17-17.02.35:932][797]LogFileHelpers: InternalPromptForCheckoutAndSave took 260 ms (total: 13.2 sec)
+[2024.03.17-17.02.35:940][797]AssetCheck: New page: Asset Save: BP_ThirdPersonCharacter
+[2024.03.17-17.02.35:940][797]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter
+[2024.03.17-17.02.39:220][986]BlueprintLog: New page: Compile BP_ThirdPersonCharacter
+[2024.03.17-17.02.39:419][986]LogUObjectHash: Compacting FUObjectHashTables data took   2.26ms
+[2024.03.17-17.02.40:194][ 16]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.17-17.02.40:432][ 16]LogSavePackage: Moving output files for package: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter
+[2024.03.17-17.02.40:434][ 16]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_ThirdPersonCharacter16218BC94B2F7EB9F3FB419A144ED760.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset'
+[2024.03.17-17.02.40:449][ 16]LogFileHelpers: InternalPromptForCheckoutAndSave took 255 ms (total: 13.4 sec)
+[2024.03.17-17.02.40:460][ 16]AssetCheck: New page: Asset Save: BP_ThirdPersonCharacter
+[2024.03.17-17.02.40:460][ 16]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter
+[2024.03.17-17.02.42:462][104]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.17-17.02.42:483][104]LogContentBundle: [Container: ThirdPersonMap] Generating Streaming for 0 Content Bundles.
+[2024.03.17-17.02.42:487][104]LogWorldPartition: Display: GenerateStreaming started...
+[2024.03.17-17.02.42:487][104]LogWorldPartition: Display: GetPartitionedActors started...
+[2024.03.17-17.02.42:487][104]LogWorldPartition: Display: GetPartitionedActors took 13 us (total: 1 ms)
+[2024.03.17-17.02.42:487][104]LogWorldPartition: Display: GenerateStreaming took 463 us (total: 12 ms)
+[2024.03.17-17.02.42:488][104]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.17-17.02.42:488][104]PIE: New page: PIE session: ThirdPersonMap (Mar 17, 2024, 9:02:42 AM)
+[2024.03.17-17.02.42:488][104]LogPlayLevel: Creating play world package: /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.02.42:499][104]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010420s)
+[2024.03.17-17.02.42:499][104]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Maps/ThirdPersonMap.ThirdPersonMap to /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap (0.010497s)
+[2024.03.17-17.02.42:499][104]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.17-17.02.42:500][104]LogAIModule: Creating AISystem for world ThirdPersonMap
+[2024.03.17-17.02.42:501][104]LogWorldPartition: ULevel::OnLevelLoaded(ThirdPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, bIsValidLevelInstance=0, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=0)
+[2024.03.17-17.02.42:501][104]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.03.17-17.02.42:501][104]LogWorldPartition: UWorldPartition::Initialize(Asset=ThirdPersonMap, IsEditor=0, bPIEWorldTravel=0 IsGame=0, IsCooking=0)
+[2024.03.17-17.02.42:504][104]LogContentBundle: [Container: ThirdPersonMap] Creating new contrainer.
+[2024.03.17-17.02.42:504][104]LogWorldPartition: Display: WorldPartition initialize took 2 ms (total: 1.14 sec)
+[2024.03.17-17.02.42:504][104]LogPlayLevel: PIE: World Init took: (0.005809s)
+[2024.03.17-17.02.42:595][104]LogUObjectHash: Compacting FUObjectHashTables data took   3.98ms
+[2024.03.17-17.02.42:597][104]LogAudio: Display: Creating Audio Device:                 Id: 17, Scope: Unique, Realtime: True
+[2024.03.17-17.02.42:597][104]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.17-17.02.42:597][104]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.17-17.02.42:597][104]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.17-17.02.42:597][104]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.17-17.02.42:597][104]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.17-17.02.42:597][104]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.03.17-17.02.42:597][104]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.17-17.02.42:598][104]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.17-17.02.42:599][104]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.17-17.02.42:599][104]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.17-17.02.42:599][104]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.17-17.02.42:603][104]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.17-17.02.42:770][104]LogAudioMixer: Display: Using Audio Hardware Device Headphones (2- Realtek(R) Audio)
+[2024.03.17-17.02.42:771][104]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.17-17.02.42:771][104]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.17-17.02.42:771][104]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.17-17.02.42:775][104]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=17
+[2024.03.17-17.02.42:775][104]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=17
+[2024.03.17-17.02.42:779][104]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=17
+[2024.03.17-17.02.42:779][104]LogInit: FAudioDevice initialized.
+[2024.03.17-17.02.42:779][104]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=17
+[2024.03.17-17.02.42:779][104]LogAudio: Display: Audio Device (ID: 17) registered with world 'ThirdPersonMap'.
+[2024.03.17-17.02.42:784][104]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2024.03.17-17.02.42:788][104]LogWorld: Bringing World /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap up for play (max tick rate 60) at 2024.03.17-13.02.42
+[2024.03.17-17.02.42:789][104]LogWorld: Bringing up level for play took: 0.004352
+[2024.03.17-17.02.42:794][104]LogOnline: OSS: Created online subsystem instance for: :Context_28
+[2024.03.17-17.02.42:798][104]LogWorldPartition: New Streaming Source: PlayerController_0 -> Position: X=900.000 Y=1110.000 Z=92.013
+[2024.03.17-17.02.42:799][104]PIE: Server logged in
+[2024.03.17-17.02.42:800][104]PIE: Play in editor total start time 0.317 seconds.
+[2024.03.17-17.02.44:768][185]LogBlueprintUserMessages: [BP_Blue_Projectile_C_0] Time in Cycle:13.0
+[2024.03.17-17.02.45:614][228]LogBlueprintUserMessages: [BP_Blue_Projectile_C_1] Time in Cycle:14.0
+[2024.03.17-17.02.47:075][296]LogBlueprintUserMessages: [BP_Blue_Projectile_C_2] Time in Cycle:29.0
+[2024.03.17-17.02.48:980][392]LogBlueprintUserMessages: [BP_Blue_Projectile_C_3] Time in Cycle:7.0
+[2024.03.17-17.02.50:019][440]LogBlueprintUserMessages: [BP_Blue_Projectile_C_4] Time in Cycle:12.0
+[2024.03.17-17.02.50:987][489]LogBlueprintUserMessages: [BP_Blue_Projectile_C_5] Time in Cycle:15.0
+[2024.03.17-17.02.52:207][548]LogBlueprintUserMessages: [BP_Blue_Projectile_C_6] Time in Cycle:18.0
+[2024.03.17-17.02.54:984][683]LogBlueprintUserMessages: [BP_Blue_Projectile_C_7] Time in Cycle:82.0
+[2024.03.17-17.02.58:633][861]LogBlueprintUserMessages: [BP_Blue_Projectile_C_8] Time in Cycle:78.0
+[2024.03.17-17.03.01:929][ 16]LogBlueprintUserMessages: [BP_Blue_Projectile_C_9] Time in Cycle:15.0
+[2024.03.17-17.03.04:006][110]LogBlueprintUserMessages: [BP_Blue_Projectile_C_10] Time in Cycle:68.0
+[2024.03.17-17.03.06:150][211]LogBlueprintUserMessages: [BP_Blue_Projectile_C_11] Time in Cycle:10.0
+[2024.03.17-17.03.08:811][338]LogBlueprintUserMessages: [BP_Blue_Projectile_C_12] Time in Cycle:82.0
+[2024.03.17-17.03.12:566][521]LogBlueprintUserMessages: [BP_Blue_Projectile_C_13] Time in Cycle:89.0
+[2024.03.17-17.03.15:703][669]LogBlueprintUserMessages: [BP_Blue_Projectile_C_14] Time in Cycle:17.0
+[2024.03.17-17.03.19:119][824]LogBlueprintUserMessages: [BP_Blue_Projectile_C_15] Time in Cycle:41.0
+[2024.03.17-17.03.21:590][943]LogBlueprintUserMessages: [BP_Blue_Projectile_C_16] Time in Cycle:30.0
+[2024.03.17-17.03.23:260][ 19]LogBlueprintUserMessages: [BP_Blue_Projectile_C_17] Time in Cycle:22.0
+[2024.03.17-17.03.25:692][133]LogBlueprintUserMessages: [BP_Blue_Projectile_C_18] Time in Cycle:41.0
+[2024.03.17-17.03.29:069][289]LogBlueprintUserMessages: [BP_Blue_Projectile_C_19] Time in Cycle:62.0
+[2024.03.17-17.03.30:912][370]LogBlueprintUserMessages: [BP_Blue_Projectile_C_20] Time in Cycle:4.0
+[2024.03.17-17.03.31:576][402]LogBlueprintUserMessages: [BP_Blue_Projectile_C_21] Time in Cycle:8.0
+[2024.03.17-17.03.32:374][438]LogBlueprintUserMessages: [BP_Blue_Projectile_C_22] Time in Cycle:10.0
+[2024.03.17-17.03.34:967][558]LogBlueprintUserMessages: [BP_Blue_Projectile_C_23] Time in Cycle:51.0
+[2024.03.17-17.03.36:592][636]LogBlueprintUserMessages: [BP_Blue_Projectile_C_24] Time in Cycle:25.0
+[2024.03.17-17.03.38:176][707]LogBlueprintUserMessages: [BP_Blue_Projectile_C_25] Time in Cycle:30.0
+[2024.03.17-17.03.39:784][784]LogBlueprintUserMessages: [BP_Blue_Projectile_C_26] Time in Cycle:42.0
+[2024.03.17-17.03.43:384][954]LogBlueprintUserMessages: [BP_Blue_Projectile_C_27] Time in Cycle:85.0
+[2024.03.17-17.03.45:475][ 41]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.03.45:475][ 41]LogWorld: BeginTearingDown for /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.03.45:475][ 41]LogWorld: UWorld::CleanupWorld for ThirdPersonMap, bSessionEnded=true, bCleanupResources=true
+[2024.03.17-17.03.45:476][ 41]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.03.45:476][ 41]LogContentBundle: [Container: ThirdPersonMap] Deleting container.
+[2024.03.17-17.03.45:507][ 41]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.17-17.03.45:516][ 41]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.03.45:611][ 41]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.03.17-17.03.45:612][ 41]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=17
+[2024.03.17-17.03.45:616][ 41]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=17
+[2024.03.17-17.03.45:638][ 41]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.03.45:645][ 41]LogUObjectHash: Compacting FUObjectHashTables data took   3.73ms
+[2024.03.17-17.03.45:772][ 42]LogPlayLevel: Display: Destroying online subsystem :Context_28
+[2024.03.17-17.03.49:027][186]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.17-17.03.49:047][186]LogContentBundle: [Container: ThirdPersonMap] Generating Streaming for 0 Content Bundles.
+[2024.03.17-17.03.49:052][186]LogWorldPartition: Display: GenerateStreaming started...
+[2024.03.17-17.03.49:052][186]LogWorldPartition: Display: GetPartitionedActors started...
+[2024.03.17-17.03.49:052][186]LogWorldPartition: Display: GetPartitionedActors took 22 us (total: 1 ms)
+[2024.03.17-17.03.49:052][186]LogWorldPartition: Display: GenerateStreaming took 554 us (total: 13 ms)
+[2024.03.17-17.03.49:053][186]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.17-17.03.49:053][186]PIE: New page: PIE session: ThirdPersonMap (Mar 17, 2024, 9:03:49 AM)
+[2024.03.17-17.03.49:053][186]LogPlayLevel: Creating play world package: /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.03.49:065][186]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011877s)
+[2024.03.17-17.03.49:065][186]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Maps/ThirdPersonMap.ThirdPersonMap to /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap (0.011955s)
+[2024.03.17-17.03.49:066][186]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.17-17.03.49:067][186]LogAIModule: Creating AISystem for world ThirdPersonMap
+[2024.03.17-17.03.49:068][186]LogWorldPartition: ULevel::OnLevelLoaded(ThirdPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, bIsValidLevelInstance=0, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=0)
+[2024.03.17-17.03.49:068][186]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.03.17-17.03.49:068][186]LogWorldPartition: UWorldPartition::Initialize(Asset=ThirdPersonMap, IsEditor=0, bPIEWorldTravel=0 IsGame=0, IsCooking=0)
+[2024.03.17-17.03.49:071][186]LogContentBundle: [Container: ThirdPersonMap] Creating new contrainer.
+[2024.03.17-17.03.49:071][186]LogWorldPartition: Display: WorldPartition initialize took 2 ms (total: 1.15 sec)
+[2024.03.17-17.03.49:071][186]LogPlayLevel: PIE: World Init took: (0.005808s)
+[2024.03.17-17.03.49:172][186]LogUObjectHash: Compacting FUObjectHashTables data took   3.67ms
+[2024.03.17-17.03.49:174][186]LogAudio: Display: Creating Audio Device:                 Id: 18, Scope: Unique, Realtime: True
+[2024.03.17-17.03.49:174][186]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.17-17.03.49:174][186]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.17-17.03.49:174][186]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.17-17.03.49:174][186]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.17-17.03.49:174][186]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.17-17.03.49:174][186]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.03.17-17.03.49:174][186]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.17-17.03.49:174][186]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.17-17.03.49:175][186]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.17-17.03.49:175][186]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.17-17.03.49:175][186]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.17-17.03.49:180][186]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.17-17.03.49:352][186]LogAudioMixer: Display: Using Audio Hardware Device Headphones (2- Realtek(R) Audio)
+[2024.03.17-17.03.49:353][186]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.17-17.03.49:353][186]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.17-17.03.49:353][186]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.17-17.03.49:356][186]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=18
+[2024.03.17-17.03.49:356][186]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=18
+[2024.03.17-17.03.49:359][186]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=18
+[2024.03.17-17.03.49:359][186]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=18
+[2024.03.17-17.03.49:360][186]LogInit: FAudioDevice initialized.
+[2024.03.17-17.03.49:360][186]LogAudio: Display: Audio Device (ID: 18) registered with world 'ThirdPersonMap'.
+[2024.03.17-17.03.49:367][186]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2024.03.17-17.03.49:372][186]LogWorld: Bringing World /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap up for play (max tick rate 60) at 2024.03.17-13.03.49
+[2024.03.17-17.03.49:372][186]LogWorld: Bringing up level for play took: 0.004286
+[2024.03.17-17.03.49:376][186]LogOnline: OSS: Created online subsystem instance for: :Context_29
+[2024.03.17-17.03.49:380][186]LogWorldPartition: New Streaming Source: PlayerController_0 -> Position: X=900.000 Y=1110.000 Z=92.013
+[2024.03.17-17.03.49:381][186]PIE: Server logged in
+[2024.03.17-17.03.49:382][186]PIE: Play in editor total start time 0.334 seconds.
+[2024.03.17-17.04.00:779][669]LogViewport: Scene viewport resized to 506x199, mode Windowed.
+[2024.03.17-17.04.08:927][928]LogBlueprintUserMessages: [BP_Blue_Projectile_C_0] Time in Cycle:10.0
+[2024.03.17-17.04.10:029][966]LogBlueprintUserMessages: [BP_Blue_Projectile_C_1] Time in Cycle:23.0
+[2024.03.17-17.04.10:180][971]LogBlueprintUserMessages: [BP_Blue_Projectile_C_2] Time in Cycle:3.0
+[2024.03.17-17.04.12:628][ 56]LogBlueprintUserMessages: [BP_Blue_Projectile_C_3] Time in Cycle:52.0
+[2024.03.17-17.04.17:181][212]LogBlueprintUserMessages: [BP_Blue_Projectile_C_4] Time in Cycle:29.0
+[2024.03.17-17.04.19:037][276]LogBlueprintUserMessages: [BP_Blue_Projectile_C_5] Time in Cycle:45.0
+[2024.03.17-17.04.23:124][417]LogBlueprintUserMessages: [BP_Blue_Projectile_C_6] Time in Cycle:12.0
+[2024.03.17-17.04.25:737][507]LogBlueprintUserMessages: [BP_Blue_Projectile_C_7] Time in Cycle:76.0
+[2024.03.17-17.04.31:755][710]LogBlueprintUserMessages: [BP_Blue_Projectile_C_8] Time in Cycle:69.0
+[2024.03.17-17.04.34:794][809]LogBlueprintUserMessages: [BP_Blue_Projectile_C_9] Time in Cycle:58.0
+[2024.03.17-17.04.35:945][845]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.04.35:945][845]LogWorld: BeginTearingDown for /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.04.35:945][845]LogWorld: UWorld::CleanupWorld for ThirdPersonMap, bSessionEnded=true, bCleanupResources=true
+[2024.03.17-17.04.35:946][845]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.04.35:946][845]LogContentBundle: [Container: ThirdPersonMap] Deleting container.
+[2024.03.17-17.04.35:954][845]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.17-17.04.35:961][845]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.04.36:045][845]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.04.36:046][845]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=18
+[2024.03.17-17.04.36:049][845]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=18
+[2024.03.17-17.04.36:083][845]LogUObjectHash: Compacting FUObjectHashTables data took   3.16ms
+[2024.03.17-17.04.36:206][846]LogPlayLevel: Display: Destroying online subsystem :Context_29
+[2024.03.17-17.05.07:899][ 47]LogHttp: Warning: 000006D767926E00: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.05.07:899][ 47]LogHttp: Warning: 000006D767926E00: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.05.07:899][ 47]LogHttp: Warning: 000006D767926E00: libcurl info message cache 0 (Found bundle for host: 0x6d7169709c0 [serially])
+[2024.03.17-17.05.07:899][ 47]LogHttp: Warning: 000006D767926E00: libcurl info message cache 1 (Re-using existing connection #15 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.05.07:899][ 47]LogHttp: Warning: 000006D767926E00: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (3.234.97.104) port 443 (#15))
+[2024.03.17-17.05.07:899][ 47]LogHttp: Warning: 000006D767926E00: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.05.07:899][ 47]LogHttp: Warning: 000006D767926E00: libcurl info message cache 4 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.05.07:899][ 47]LogHttp: Warning: 000006D767926E00: libcurl info message cache 5 (necessary data rewind wasn't possible)
+[2024.03.17-17.05.07:899][ 47]LogHttp: Warning: 000006D767926E00: libcurl info message cache 6 (Closing connection 15)
+[2024.03.17-17.05.07:899][ 47]LogHttp: Warning: 000006D767926E00: libcurl info message cache 7 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.05.07:899][ 47]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-17.08.27:660][755]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.17-17.08.27:836][755]LogSavePackage: Moving output files for package: /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile
+[2024.03.17-17.08.27:838][755]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_Blue_Projectile4A17EBAA4AF9C4FFF64B2D8FC37A0E1C.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Blue_Projectile.uasset'
+[2024.03.17-17.08.27:856][755]LogFileHelpers: InternalPromptForCheckoutAndSave took 196 ms (total: 13.6 sec)
+[2024.03.17-17.08.27:870][755]AssetCheck: New page: Asset Save: BP_Blue_Projectile
+[2024.03.17-17.08.27:870][755]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile.BP_Blue_Projectile
+[2024.03.17-17.09.13:734][336]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.17-17.09.13:936][336]LogSavePackage: Moving output files for package: /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile
+[2024.03.17-17.09.13:938][336]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_Blue_ProjectileF124A9B94D6C477C9148B7BEF5741107.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Blue_Projectile.uasset'
+[2024.03.17-17.09.13:955][336]LogFileHelpers: InternalPromptForCheckoutAndSave took 221 ms (total: 13.8 sec)
+[2024.03.17-17.09.13:964][336]AssetCheck: New page: Asset Save: BP_Blue_Projectile
+[2024.03.17-17.09.13:964][336]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile.BP_Blue_Projectile
+[2024.03.17-17.09.23:381][891]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.17-17.09.23:530][891]LogSavePackage: Moving output files for package: /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile
+[2024.03.17-17.09.23:531][891]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_Blue_ProjectileAD9614FC46FE9719802072B2906A1973.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Blue_Projectile.uasset'
+[2024.03.17-17.09.23:546][891]LogFileHelpers: InternalPromptForCheckoutAndSave took 164 ms (total: 14.0 sec)
+[2024.03.17-17.09.23:556][891]AssetCheck: New page: Asset Save: BP_Blue_Projectile
+[2024.03.17-17.09.23:556][891]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile.BP_Blue_Projectile
+[2024.03.17-17.09.24:452][941]BlueprintLog: New page: Compile BP_Blue_Projectile
+[2024.03.17-17.09.24:661][941]LogUObjectHash: Compacting FUObjectHashTables data took   3.43ms
+[2024.03.17-17.09.24:967][952]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.17-17.09.25:152][952]LogSavePackage: Moving output files for package: /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile
+[2024.03.17-17.09.25:154][952]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_Blue_ProjectileBA4FA66B47AF153E41FD1193759FEC21.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Blue_Projectile.uasset'
+[2024.03.17-17.09.25:173][952]LogFileHelpers: InternalPromptForCheckoutAndSave took 206 ms (total: 14.2 sec)
+[2024.03.17-17.09.25:185][952]AssetCheck: New page: Asset Save: BP_Blue_Projectile
+[2024.03.17-17.09.25:185][952]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile.BP_Blue_Projectile
+[2024.03.17-17.10.24:417][218]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.17-17.10.24:677][218]LogSavePackage: Moving output files for package: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter
+[2024.03.17-17.10.24:679][218]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_ThirdPersonCharacter284D5C604FD464558D61489615ED77FB.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset'
+[2024.03.17-17.10.24:699][218]LogFileHelpers: InternalPromptForCheckoutAndSave took 281 ms (total: 14.5 sec)
+[2024.03.17-17.10.24:708][218]AssetCheck: New page: Asset Save: BP_ThirdPersonCharacter
+[2024.03.17-17.10.24:708][218]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter
+[2024.03.17-17.10.25:221][249]BlueprintLog: New page: Compile BP_ThirdPersonCharacter
+[2024.03.17-17.10.25:427][249]LogUObjectHash: Compacting FUObjectHashTables data took   3.31ms
+[2024.03.17-17.10.25:954][269]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.17-17.10.26:215][269]LogSavePackage: Moving output files for package: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter
+[2024.03.17-17.10.26:217][269]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_ThirdPersonCharacter9806B58146B265CBA5B51C957D72E4E7.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset'
+[2024.03.17-17.10.26:236][269]LogFileHelpers: InternalPromptForCheckoutAndSave took 281 ms (total: 14.8 sec)
+[2024.03.17-17.10.26:244][269]AssetCheck: New page: Asset Save: BP_ThirdPersonCharacter
+[2024.03.17-17.10.26:245][269]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter
+[2024.03.17-17.10.27:223][320]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.17-17.10.27:243][320]LogContentBundle: [Container: ThirdPersonMap] Generating Streaming for 0 Content Bundles.
+[2024.03.17-17.10.27:248][320]LogWorldPartition: Display: GenerateStreaming started...
+[2024.03.17-17.10.27:248][320]LogWorldPartition: Display: GetPartitionedActors started...
+[2024.03.17-17.10.27:248][320]LogWorldPartition: Display: GetPartitionedActors took 37 us (total: 1 ms)
+[2024.03.17-17.10.27:248][320]LogWorldPartition: Display: GenerateStreaming took 820 us (total: 14 ms)
+[2024.03.17-17.10.27:249][320]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.17-17.10.27:250][320]PIE: New page: PIE session: ThirdPersonMap (Mar 17, 2024, 9:10:27 AM)
+[2024.03.17-17.10.27:250][320]LogPlayLevel: Creating play world package: /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.10.27:266][320]LogPlayLevel: PIE: StaticDuplicateObject took: (0.015942s)
+[2024.03.17-17.10.27:266][320]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Maps/ThirdPersonMap.ThirdPersonMap to /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap (0.016058s)
+[2024.03.17-17.10.27:266][320]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.17-17.10.27:268][320]LogAIModule: Creating AISystem for world ThirdPersonMap
+[2024.03.17-17.10.27:269][320]LogWorldPartition: ULevel::OnLevelLoaded(ThirdPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, bIsValidLevelInstance=0, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=0)
+[2024.03.17-17.10.27:269][320]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.03.17-17.10.27:269][320]LogWorldPartition: UWorldPartition::Initialize(Asset=ThirdPersonMap, IsEditor=0, bPIEWorldTravel=0 IsGame=0, IsCooking=0)
+[2024.03.17-17.10.27:273][320]LogContentBundle: [Container: ThirdPersonMap] Creating new contrainer.
+[2024.03.17-17.10.27:273][320]LogWorldPartition: Display: WorldPartition initialize took 3 ms (total: 1.15 sec)
+[2024.03.17-17.10.27:273][320]LogPlayLevel: PIE: World Init took: (0.007461s)
+[2024.03.17-17.10.27:397][320]LogUObjectHash: Compacting FUObjectHashTables data took   5.21ms
+[2024.03.17-17.10.27:405][320]LogAudio: Display: Creating Audio Device:                 Id: 19, Scope: Unique, Realtime: True
+[2024.03.17-17.10.27:405][320]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.17-17.10.27:405][320]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.17-17.10.27:405][320]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.17-17.10.27:405][320]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.17-17.10.27:405][320]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.17-17.10.27:405][320]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.03.17-17.10.27:405][320]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.17-17.10.27:405][320]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.17-17.10.27:406][320]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.17-17.10.27:406][320]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.17-17.10.27:406][320]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.17-17.10.27:412][320]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.17-17.10.27:611][320]LogAudioMixer: Display: Using Audio Hardware Device Headphones (2- Realtek(R) Audio)
+[2024.03.17-17.10.27:612][320]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.17-17.10.27:612][320]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.17-17.10.27:612][320]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.17-17.10.27:616][320]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=19
+[2024.03.17-17.10.27:616][320]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=19
+[2024.03.17-17.10.27:620][320]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=19
+[2024.03.17-17.10.27:620][320]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=19
+[2024.03.17-17.10.27:620][320]LogInit: FAudioDevice initialized.
+[2024.03.17-17.10.27:620][320]LogAudio: Display: Audio Device (ID: 19) registered with world 'ThirdPersonMap'.
+[2024.03.17-17.10.27:627][320]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2024.03.17-17.10.27:632][320]LogWorld: Bringing World /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap up for play (max tick rate 60) at 2024.03.17-13.10.27
+[2024.03.17-17.10.27:633][320]LogWorld: Bringing up level for play took: 0.004981
+[2024.03.17-17.10.27:637][320]LogOnline: OSS: Created online subsystem instance for: :Context_30
+[2024.03.17-17.10.27:642][320]LogWorldPartition: New Streaming Source: PlayerController_0 -> Position: X=900.000 Y=1110.000 Z=92.013
+[2024.03.17-17.10.27:643][320]PIE: Server logged in
+[2024.03.17-17.10.27:644][320]PIE: Play in editor total start time 0.401 seconds.
+[2024.03.17-17.10.37:783][744]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.10.37:784][744]LogWorld: BeginTearingDown for /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.10.37:784][744]LogWorld: UWorld::CleanupWorld for ThirdPersonMap, bSessionEnded=true, bCleanupResources=true
+[2024.03.17-17.10.37:785][744]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.10.37:785][744]LogContentBundle: [Container: ThirdPersonMap] Deleting container.
+[2024.03.17-17.10.37:839][744]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.17-17.10.37:850][744]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.10.37:976][744]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.03.17-17.10.37:976][744]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=19
+[2024.03.17-17.10.37:981][744]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=19
+[2024.03.17-17.10.38:010][744]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.10.38:018][744]LogUObjectHash: Compacting FUObjectHashTables data took   4.15ms
+[2024.03.17-17.10.38:166][745]LogPlayLevel: Display: Destroying online subsystem :Context_30
+[2024.03.17-17.10.39:714][797]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.17-17.10.39:744][797]LogContentBundle: [Container: ThirdPersonMap] Generating Streaming for 0 Content Bundles.
+[2024.03.17-17.10.39:748][797]LogWorldPartition: Display: GenerateStreaming started...
+[2024.03.17-17.10.39:748][797]LogWorldPartition: Display: GetPartitionedActors started...
+[2024.03.17-17.10.39:748][797]LogWorldPartition: Display: GetPartitionedActors took 16 us (total: 1 ms)
+[2024.03.17-17.10.39:749][797]LogWorldPartition: Display: GenerateStreaming took 676 us (total: 14 ms)
+[2024.03.17-17.10.39:749][797]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.17-17.10.39:750][797]PIE: New page: PIE session: ThirdPersonMap (Mar 17, 2024, 9:10:39 AM)
+[2024.03.17-17.10.39:750][797]LogPlayLevel: Creating play world package: /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.10.39:764][797]LogPlayLevel: PIE: StaticDuplicateObject took: (0.013526s)
+[2024.03.17-17.10.39:764][797]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Maps/ThirdPersonMap.ThirdPersonMap to /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap (0.013627s)
+[2024.03.17-17.10.39:764][797]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.17-17.10.39:766][797]LogAIModule: Creating AISystem for world ThirdPersonMap
+[2024.03.17-17.10.39:766][797]LogWorldPartition: ULevel::OnLevelLoaded(ThirdPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, bIsValidLevelInstance=0, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=0)
+[2024.03.17-17.10.39:766][797]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.03.17-17.10.39:766][797]LogWorldPartition: UWorldPartition::Initialize(Asset=ThirdPersonMap, IsEditor=0, bPIEWorldTravel=0 IsGame=0, IsCooking=0)
+[2024.03.17-17.10.39:770][797]LogContentBundle: [Container: ThirdPersonMap] Creating new contrainer.
+[2024.03.17-17.10.39:770][797]LogWorldPartition: Display: WorldPartition initialize took 3 ms (total: 1.15 sec)
+[2024.03.17-17.10.39:770][797]LogPlayLevel: PIE: World Init took: (0.005721s)
+[2024.03.17-17.10.39:871][797]LogUObjectHash: Compacting FUObjectHashTables data took   3.26ms
+[2024.03.17-17.10.39:873][797]LogAudio: Display: Creating Audio Device:                 Id: 20, Scope: Unique, Realtime: True
+[2024.03.17-17.10.39:873][797]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.17-17.10.39:873][797]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.17-17.10.39:873][797]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.17-17.10.39:873][797]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.17-17.10.39:873][797]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.17-17.10.39:873][797]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.03.17-17.10.39:873][797]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.17-17.10.39:873][797]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.17-17.10.39:874][797]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.17-17.10.39:874][797]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.17-17.10.39:874][797]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.17-17.10.39:880][797]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.17-17.10.40:047][797]LogAudioMixer: Display: Using Audio Hardware Device Headphones (2- Realtek(R) Audio)
+[2024.03.17-17.10.40:048][797]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.17-17.10.40:048][797]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.17-17.10.40:048][797]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.17-17.10.40:048][797]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=20
+[2024.03.17-17.10.40:048][797]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=20
+[2024.03.17-17.10.40:053][797]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=20
+[2024.03.17-17.10.40:053][797]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=20
+[2024.03.17-17.10.40:053][797]LogInit: FAudioDevice initialized.
+[2024.03.17-17.10.40:053][797]LogAudio: Display: Audio Device (ID: 20) registered with world 'ThirdPersonMap'.
+[2024.03.17-17.10.40:058][797]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2024.03.17-17.10.40:062][797]LogWorld: Bringing World /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap up for play (max tick rate 60) at 2024.03.17-13.10.40
+[2024.03.17-17.10.40:063][797]LogWorld: Bringing up level for play took: 0.004316
+[2024.03.17-17.10.40:067][797]LogOnline: OSS: Created online subsystem instance for: :Context_31
+[2024.03.17-17.10.40:072][797]LogWorldPartition: New Streaming Source: PlayerController_0 -> Position: X=900.000 Y=1110.000 Z=92.013
+[2024.03.17-17.10.40:074][797]PIE: Server logged in
+[2024.03.17-17.10.40:075][797]PIE: Play in editor total start time 0.33 seconds.
+[2024.03.17-17.10.48:223][152]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.10.48:224][152]LogWorld: BeginTearingDown for /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.10.48:224][152]LogWorld: UWorld::CleanupWorld for ThirdPersonMap, bSessionEnded=true, bCleanupResources=true
+[2024.03.17-17.10.48:224][152]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.10.48:225][152]LogContentBundle: [Container: ThirdPersonMap] Deleting container.
+[2024.03.17-17.10.48:232][152]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.17-17.10.48:241][152]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.10.48:335][152]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.10.48:335][152]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=20
+[2024.03.17-17.10.48:339][152]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=20
+[2024.03.17-17.10.48:395][152]LogUObjectHash: Compacting FUObjectHashTables data took   3.87ms
+[2024.03.17-17.10.48:512][153]LogPlayLevel: Display: Destroying online subsystem :Context_31
+[2024.03.17-17.11.07:792][262]LogHttp: Warning: 000006D773F6DC00: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.11.07:792][262]LogHttp: Warning: 000006D773F6DC00: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.11.07:792][262]LogHttp: Warning: 000006D773F6DC00: libcurl info message cache 0 (Found bundle for host: 0x6d716970d50 [serially])
+[2024.03.17-17.11.07:792][262]LogHttp: Warning: 000006D773F6DC00: libcurl info message cache 1 (Re-using existing connection #16 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.11.07:792][262]LogHttp: Warning: 000006D773F6DC00: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (3.95.75.107) port 443 (#16))
+[2024.03.17-17.11.07:792][262]LogHttp: Warning: 000006D773F6DC00: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.11.07:792][262]LogHttp: Warning: 000006D773F6DC00: libcurl info message cache 4 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.11.07:792][262]LogHttp: Warning: 000006D773F6DC00: libcurl info message cache 5 (necessary data rewind wasn't possible)
+[2024.03.17-17.11.07:792][262]LogHttp: Warning: 000006D773F6DC00: libcurl info message cache 6 (Closing connection 16)
+[2024.03.17-17.11.07:792][262]LogHttp: Warning: 000006D773F6DC00: libcurl info message cache 7 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.11.07:792][262]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-17.12.31:045][667]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.17-17.12.31:074][667]LogContentBundle: [Container: ThirdPersonMap] Generating Streaming for 0 Content Bundles.
+[2024.03.17-17.12.31:078][667]LogWorldPartition: Display: GenerateStreaming started...
+[2024.03.17-17.12.31:078][667]LogWorldPartition: Display: GetPartitionedActors started...
+[2024.03.17-17.12.31:078][667]LogWorldPartition: Display: GetPartitionedActors took 24 us (total: 1 ms)
+[2024.03.17-17.12.31:079][667]LogWorldPartition: Display: GenerateStreaming took 809 us (total: 15 ms)
+[2024.03.17-17.12.31:080][667]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.17-17.12.31:080][667]PIE: New page: PIE session: ThirdPersonMap (Mar 17, 2024, 9:12:31 AM)
+[2024.03.17-17.12.31:080][667]LogPlayLevel: Creating play world package: /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.12.31:103][667]LogPlayLevel: PIE: StaticDuplicateObject took: (0.022545s)
+[2024.03.17-17.12.31:103][667]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Maps/ThirdPersonMap.ThirdPersonMap to /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap (0.022665s)
+[2024.03.17-17.12.31:103][667]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.17-17.12.31:104][667]LogAIModule: Creating AISystem for world ThirdPersonMap
+[2024.03.17-17.12.31:106][667]LogWorldPartition: ULevel::OnLevelLoaded(ThirdPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, bIsValidLevelInstance=0, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=0)
+[2024.03.17-17.12.31:106][667]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.03.17-17.12.31:106][667]LogWorldPartition: UWorldPartition::Initialize(Asset=ThirdPersonMap, IsEditor=0, bPIEWorldTravel=0 IsGame=0, IsCooking=0)
+[2024.03.17-17.12.31:111][667]LogContentBundle: [Container: ThirdPersonMap] Creating new contrainer.
+[2024.03.17-17.12.31:111][667]LogWorldPartition: Display: WorldPartition initialize took 4 ms (total: 1.16 sec)
+[2024.03.17-17.12.31:111][667]LogPlayLevel: PIE: World Init took: (0.008477s)
+[2024.03.17-17.12.31:234][667]LogUObjectHash: Compacting FUObjectHashTables data took   4.82ms
+[2024.03.17-17.12.31:238][667]LogAudio: Display: Creating Audio Device:                 Id: 21, Scope: Unique, Realtime: True
+[2024.03.17-17.12.31:239][667]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.17-17.12.31:239][667]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.17-17.12.31:239][667]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.17-17.12.31:239][667]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.17-17.12.31:239][667]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.17-17.12.31:239][667]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.03.17-17.12.31:239][667]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.17-17.12.31:239][667]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.17-17.12.31:240][667]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.17-17.12.31:240][667]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.17-17.12.31:240][667]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.17-17.12.31:246][667]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.17-17.12.31:472][667]LogAudioMixer: Display: Using Audio Hardware Device Headphones (2- Realtek(R) Audio)
+[2024.03.17-17.12.31:473][667]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.17-17.12.31:473][667]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.17-17.12.31:473][667]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.17-17.12.31:474][667]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=21
+[2024.03.17-17.12.31:474][667]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=21
+[2024.03.17-17.12.31:481][667]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=21
+[2024.03.17-17.12.31:481][667]LogInit: FAudioDevice initialized.
+[2024.03.17-17.12.31:481][667]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=21
+[2024.03.17-17.12.31:481][667]LogAudio: Display: Audio Device (ID: 21) registered with world 'ThirdPersonMap'.
+[2024.03.17-17.12.31:487][667]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2024.03.17-17.12.31:495][667]LogWorld: Bringing World /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap up for play (max tick rate 60) at 2024.03.17-13.12.31
+[2024.03.17-17.12.31:496][667]LogWorld: Bringing up level for play took: 0.007691
+[2024.03.17-17.12.31:501][667]LogOnline: OSS: Created online subsystem instance for: :Context_32
+[2024.03.17-17.12.31:507][667]LogWorldPartition: New Streaming Source: PlayerController_0 -> Position: X=900.000 Y=1110.000 Z=92.013
+[2024.03.17-17.12.31:507][667]PIE: Server logged in
+[2024.03.17-17.12.31:509][667]PIE: Play in editor total start time 0.434 seconds.
+[2024.03.17-17.12.34:670][769]LogViewport: Scene viewport resized to 506x199, mode Windowed.
+[2024.03.17-17.14.07:105][794]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.14.07:105][794]LogWorld: BeginTearingDown for /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.14.07:105][794]LogWorld: UWorld::CleanupWorld for ThirdPersonMap, bSessionEnded=true, bCleanupResources=true
+[2024.03.17-17.14.07:105][794]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.14.07:106][794]LogContentBundle: [Container: ThirdPersonMap] Deleting container.
+[2024.03.17-17.14.07:113][794]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.17-17.14.07:121][794]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.14.07:236][794]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.14.07:237][794]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=21
+[2024.03.17-17.14.07:240][794]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=21
+[2024.03.17-17.14.07:274][794]LogUObjectHash: Compacting FUObjectHashTables data took   2.93ms
+[2024.03.17-17.14.07:404][795]LogPlayLevel: Display: Destroying online subsystem :Context_32
+[2024.03.17-17.14.07:699][803]LogHttp: Warning: 000006D77B103700: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.14.07:699][803]LogHttp: Warning: 000006D77B103700: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.14.07:699][803]LogHttp: Warning: 000006D77B103700: libcurl info message cache 0 (Found bundle for host: 0x6d7169700c0 [serially])
+[2024.03.17-17.14.07:699][803]LogHttp: Warning: 000006D77B103700: libcurl info message cache 1 (Re-using existing connection #17 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.14.07:699][803]LogHttp: Warning: 000006D77B103700: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (34.228.149.58) port 443 (#17))
+[2024.03.17-17.14.07:700][803]LogHttp: Warning: 000006D77B103700: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.14.07:700][803]LogHttp: Warning: 000006D77B103700: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-17.14.07:700][803]LogHttp: Warning: 000006D77B103700: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.14.07:700][803]LogHttp: Warning: 000006D77B103700: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-17.14.07:700][803]LogHttp: Warning: 000006D77B103700: libcurl info message cache 7 (Closing connection 17)
+[2024.03.17-17.14.07:700][803]LogHttp: Warning: 000006D77B103700: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.14.07:700][803]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-17.17.07:568][709]LogHttp: Warning: 000006D76BCF0500: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.17.07:568][709]LogHttp: Warning: 000006D76BCF0500: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.17.07:568][709]LogHttp: Warning: 000006D76BCF0500: libcurl info message cache 0 (Found bundle for host: 0x6d716970300 [serially])
+[2024.03.17-17.17.07:568][709]LogHttp: Warning: 000006D76BCF0500: libcurl info message cache 1 (Re-using existing connection #18 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.17.07:568][709]LogHttp: Warning: 000006D76BCF0500: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (34.235.183.231) port 443 (#18))
+[2024.03.17-17.17.07:568][709]LogHttp: Warning: 000006D76BCF0500: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.17.07:568][709]LogHttp: Warning: 000006D76BCF0500: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-17.17.07:568][709]LogHttp: Warning: 000006D76BCF0500: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.17.07:568][709]LogHttp: Warning: 000006D76BCF0500: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-17.17.07:568][709]LogHttp: Warning: 000006D76BCF0500: libcurl info message cache 7 (Closing connection 18)
+[2024.03.17-17.17.07:568][709]LogHttp: Warning: 000006D76BCF0500: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.17.07:568][709]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-17.19.24:391][321]LogUObjectHash: Compacting FUObjectHashTables data took   4.42ms
+[2024.03.17-17.19.24:395][321]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/ThirdPerson/Maps/ThirdPersonMap' took 0.122
+[2024.03.17-17.19.24:397][321]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter] ([2] browsable assets)...
+[2024.03.17-17.19.24:397][321]OBJ SavePackage: Finished generating thumbnails for package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter]
+[2024.03.17-17.19.24:525][321]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter_Auto3
+[2024.03.17-17.19.24:527][321]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_ThirdPersonCharacter_Auto31FE66E0B48771C21199123A37D00ECB7.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/Autosaves/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter_Auto3.uasset'
+[2024.03.17-17.19.24:530][321]LogFileHelpers: Auto-saving content packages took 0.135
+[2024.03.17-17.19.39:939][ 15]LogUObjectHash: Compacting FUObjectHashTables data took   1.56ms
+[2024.03.17-17.19.39:948][ 15]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.17-17.19.40:282][ 15]LogSavePackage: Moving output files for package: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter
+[2024.03.17-17.19.40:285][ 15]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_ThirdPersonCharacter85F96FD149F184E061A3EE84F294F56D.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset'
+[2024.03.17-17.19.40:307][ 15]LogFileHelpers: InternalPromptForCheckoutAndSave took 359 ms (total: 15.1 sec)
+[2024.03.17-17.19.40:322][ 15]AssetCheck: New page: Asset Save: BP_ThirdPersonCharacter
+[2024.03.17-17.19.40:322][ 15]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter
+[2024.03.17-17.20.07:671][223]LogHttp: Warning: 000006D77AEC4B00: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.20.07:671][223]LogHttp: Warning: 000006D77AEC4B00: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.20.07:671][223]LogHttp: Warning: 000006D77AEC4B00: libcurl info message cache 0 (Found bundle for host: 0x6d716970d80 [serially])
+[2024.03.17-17.20.07:671][223]LogHttp: Warning: 000006D77AEC4B00: libcurl info message cache 1 (Re-using existing connection #19 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.20.07:671][223]LogHttp: Warning: 000006D77AEC4B00: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (3.232.42.187) port 443 (#19))
+[2024.03.17-17.20.07:671][223]LogHttp: Warning: 000006D77AEC4B00: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.20.07:671][223]LogHttp: Warning: 000006D77AEC4B00: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-17.20.07:671][223]LogHttp: Warning: 000006D77AEC4B00: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.20.07:671][223]LogHttp: Warning: 000006D77AEC4B00: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-17.20.07:671][223]LogHttp: Warning: 000006D77AEC4B00: libcurl info message cache 7 (Closing connection 19)
+[2024.03.17-17.20.07:671][223]LogHttp: Warning: 000006D77AEC4B00: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.20.07:671][223]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-17.24.07:594][321]LogHttp: Warning: 000006D76D76E100: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.24.07:594][321]LogHttp: Warning: 000006D76D76E100: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.24.07:594][321]LogHttp: Warning: 000006D76D76E100: libcurl info message cache 0 (Found bundle for host: 0x6d716970960 [serially])
+[2024.03.17-17.24.07:594][321]LogHttp: Warning: 000006D76D76E100: libcurl info message cache 1 (Re-using existing connection #20 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.24.07:594][321]LogHttp: Warning: 000006D76D76E100: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (52.205.52.82) port 443 (#20))
+[2024.03.17-17.24.07:594][321]LogHttp: Warning: 000006D76D76E100: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.24.07:594][321]LogHttp: Warning: 000006D76D76E100: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-17.24.07:594][321]LogHttp: Warning: 000006D76D76E100: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.24.07:594][321]LogHttp: Warning: 000006D76D76E100: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-17.24.07:594][321]LogHttp: Warning: 000006D76D76E100: libcurl info message cache 7 (Closing connection 20)
+[2024.03.17-17.24.07:594][321]LogHttp: Warning: 000006D76D76E100: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.24.07:595][321]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-17.29.25:136][899]LogUObjectHash: Compacting FUObjectHashTables data took   5.28ms
+[2024.03.17-17.29.25:143][899]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/ThirdPerson/Maps/ThirdPersonMap' took 0.185
+[2024.03.17-17.29.25:151][899]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter] ([2] browsable assets)...
+[2024.03.17-17.29.25:152][899]OBJ SavePackage: Finished generating thumbnails for package [/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter]
+[2024.03.17-17.29.25:370][899]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter_Auto4
+[2024.03.17-17.29.25:370][899]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_ThirdPersonCharacter_Auto4C01347AA4BE7A45DD80A1E92F4E6F24F.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/Autosaves/Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter_Auto4.uasset'
+[2024.03.17-17.29.25:375][899]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile] ([2] browsable assets)...
+[2024.03.17-17.29.25:444][899]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile.BP_Blue_Projectile]
+[2024.03.17-17.29.25:445][899]OBJ SavePackage: Finished generating thumbnails for package [/Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile]
+[2024.03.17-17.29.25:494][899]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile_Auto4
+[2024.03.17-17.29.25:497][899]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_Blue_Projectile_Auto4903FDED94959484C03A82D9B0A4B09BD.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/Autosaves/Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile_Auto4.uasset'
+[2024.03.17-17.29.25:502][899]LogFileHelpers: Auto-saving content packages took 0.354
+[2024.03.17-17.33.05:561][672]LogUObjectHash: Compacting FUObjectHashTables data took   2.53ms
+[2024.03.17-17.33.05:573][672]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.17-17.33.05:910][672]LogSavePackage: Moving output files for package: /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter
+[2024.03.17-17.33.05:913][672]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_ThirdPersonCharacterA37BD4484B1AFBC5F932509FDC73BF45.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset'
+[2024.03.17-17.33.05:954][672]LogSavePackage: Moving output files for package: /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile
+[2024.03.17-17.33.05:956][672]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_Blue_ProjectileBAB5DCA243AF952BDB371999A381AFEF.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Blue_Projectile.uasset'
+[2024.03.17-17.33.05:983][672]LogFileHelpers: InternalPromptForCheckoutAndSave took 409 ms (total: 15.5 sec)
+[2024.03.17-17.33.05:998][672]AssetCheck: New page: Asset Save: multiple assets
+[2024.03.17-17.33.05:998][672]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile.BP_Blue_Projectile
+[2024.03.17-17.33.05:998][672]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter
+[2024.03.17-17.33.07:566][729]LogHttp: Warning: 000006D77BEFC800: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.33.07:567][729]LogHttp: Warning: 000006D77BEFC800: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.33.07:567][729]LogHttp: Warning: 000006D77BEFC800: libcurl info message cache 0 (Found bundle for host: 0x6d716970180 [serially])
+[2024.03.17-17.33.07:567][729]LogHttp: Warning: 000006D77BEFC800: libcurl info message cache 1 (Re-using existing connection #21 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.33.07:567][729]LogHttp: Warning: 000006D77BEFC800: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (18.205.130.178) port 443 (#21))
+[2024.03.17-17.33.07:567][729]LogHttp: Warning: 000006D77BEFC800: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.33.07:567][729]LogHttp: Warning: 000006D77BEFC800: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-17.33.07:567][729]LogHttp: Warning: 000006D77BEFC800: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.33.07:567][729]LogHttp: Warning: 000006D77BEFC800: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-17.33.07:567][729]LogHttp: Warning: 000006D77BEFC800: libcurl info message cache 7 (Closing connection 21)
+[2024.03.17-17.33.07:567][729]LogHttp: Warning: 000006D77BEFC800: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.33.07:567][729]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-17.33.19:088][ 35]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.17-17.33.19:118][ 35]LogContentBundle: [Container: ThirdPersonMap] Generating Streaming for 0 Content Bundles.
+[2024.03.17-17.33.19:123][ 35]LogWorldPartition: Display: GenerateStreaming started...
+[2024.03.17-17.33.19:123][ 35]LogWorldPartition: Display: GetPartitionedActors started...
+[2024.03.17-17.33.19:123][ 35]LogWorldPartition: Display: GetPartitionedActors took 34 us (total: 1 ms)
+[2024.03.17-17.33.19:123][ 35]LogWorldPartition: Display: GenerateStreaming took 777 us (total: 16 ms)
+[2024.03.17-17.33.19:124][ 35]BlueprintLog: New page: Pre-Play auto-recompile
+[2024.03.17-17.33.19:213][ 35]LogPlayLevel: [PlayLevel] Compiling BP_Blue_Projectile before play...
+[2024.03.17-17.33.19:574][ 35]LogUObjectHash: Compacting FUObjectHashTables data took   5.06ms
+[2024.03.17-17.33.19:586][ 35]LogPlayLevel: PlayLevel: Blueprint regeneration took 461 ms (1 blueprints)
+[2024.03.17-17.33.19:586][ 35]PIE: New page: PIE session: ThirdPersonMap (Mar 17, 2024, 9:33:19 AM)
+[2024.03.17-17.33.19:587][ 35]LogPlayLevel: Creating play world package: /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.33.19:604][ 35]LogPlayLevel: PIE: StaticDuplicateObject took: (0.016759s)
+[2024.03.17-17.33.19:604][ 35]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Maps/ThirdPersonMap.ThirdPersonMap to /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap (0.016874s)
+[2024.03.17-17.33.19:604][ 35]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.17-17.33.19:605][ 35]LogAIModule: Creating AISystem for world ThirdPersonMap
+[2024.03.17-17.33.19:607][ 35]LogWorldPartition: ULevel::OnLevelLoaded(ThirdPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, bIsValidLevelInstance=0, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=0)
+[2024.03.17-17.33.19:607][ 35]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.03.17-17.33.19:607][ 35]LogWorldPartition: UWorldPartition::Initialize(Asset=ThirdPersonMap, IsEditor=0, bPIEWorldTravel=0 IsGame=0, IsCooking=0)
+[2024.03.17-17.33.19:612][ 35]LogContentBundle: [Container: ThirdPersonMap] Creating new contrainer.
+[2024.03.17-17.33.19:612][ 35]LogWorldPartition: Display: WorldPartition initialize took 4 ms (total: 1.16 sec)
+[2024.03.17-17.33.19:612][ 35]LogPlayLevel: PIE: World Init took: (0.008364s)
+[2024.03.17-17.33.19:742][ 35]LogUObjectHash: Compacting FUObjectHashTables data took   5.10ms
+[2024.03.17-17.33.19:744][ 35]LogAudio: Display: Creating Audio Device:                 Id: 22, Scope: Unique, Realtime: True
+[2024.03.17-17.33.19:744][ 35]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.17-17.33.19:744][ 35]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.17-17.33.19:744][ 35]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.17-17.33.19:744][ 35]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.17-17.33.19:744][ 35]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.17-17.33.19:744][ 35]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.03.17-17.33.19:744][ 35]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.17-17.33.19:744][ 35]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.17-17.33.19:746][ 35]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.17-17.33.19:746][ 35]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.17-17.33.19:746][ 35]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.17-17.33.19:753][ 35]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.17-17.33.19:993][ 35]LogAudioMixer: Display: Using Audio Hardware Device Headphones (2- Realtek(R) Audio)
+[2024.03.17-17.33.19:994][ 35]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.17-17.33.19:995][ 35]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.17-17.33.19:995][ 35]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.17-17.33.19:999][ 35]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=22
+[2024.03.17-17.33.19:999][ 35]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=22
+[2024.03.17-17.33.20:003][ 35]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=22
+[2024.03.17-17.33.20:004][ 35]LogInit: FAudioDevice initialized.
+[2024.03.17-17.33.20:004][ 35]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=22
+[2024.03.17-17.33.20:004][ 35]LogAudio: Display: Audio Device (ID: 22) registered with world 'ThirdPersonMap'.
+[2024.03.17-17.33.20:011][ 35]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2024.03.17-17.33.20:018][ 35]LogWorld: Bringing World /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap up for play (max tick rate 60) at 2024.03.17-13.33.20
+[2024.03.17-17.33.20:019][ 35]LogWorld: Bringing up level for play took: 0.006768
+[2024.03.17-17.33.20:025][ 35]LogOnline: OSS: Created online subsystem instance for: :Context_33
+[2024.03.17-17.33.20:031][ 35]LogWorldPartition: New Streaming Source: PlayerController_0 -> Position: X=900.000 Y=1110.000 Z=92.013
+[2024.03.17-17.33.20:032][ 35]PIE: Server logged in
+[2024.03.17-17.33.20:034][ 35]PIE: Play in editor total start time 0.917 seconds.
+[2024.03.17-17.33.41:170][652]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.33.41:170][652]LogWorld: BeginTearingDown for /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.33.41:171][652]LogWorld: UWorld::CleanupWorld for ThirdPersonMap, bSessionEnded=true, bCleanupResources=true
+[2024.03.17-17.33.41:172][652]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.33.41:173][652]LogContentBundle: [Container: ThirdPersonMap] Deleting container.
+[2024.03.17-17.33.41:216][652]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.17-17.33.41:230][652]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.33.41:357][652]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.33.41:358][652]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=22
+[2024.03.17-17.33.41:363][652]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=22
+[2024.03.17-17.33.41:414][652]LogUObjectHash: Compacting FUObjectHashTables data took   4.78ms
+[2024.03.17-17.33.41:664][653]LogPlayLevel: Display: Destroying online subsystem :Context_33
+[2024.03.17-17.33.56:081][263]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.17-17.33.56:405][263]LogSavePackage: Moving output files for package: /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile
+[2024.03.17-17.33.56:407][263]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_Blue_Projectile564B813E4A902019F758EAB8FD836FF7.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Blue_Projectile.uasset'
+[2024.03.17-17.33.56:431][263]LogFileHelpers: InternalPromptForCheckoutAndSave took 350 ms (total: 15.9 sec)
+[2024.03.17-17.33.56:446][263]AssetCheck: New page: Asset Save: BP_Blue_Projectile
+[2024.03.17-17.33.56:446][263]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile.BP_Blue_Projectile
+[2024.03.17-17.33.56:813][284]BlueprintLog: New page: Compile BP_Blue_Projectile
+[2024.03.17-17.33.57:056][284]LogUObjectHash: Compacting FUObjectHashTables data took   4.46ms
+[2024.03.17-17.34.03:933][551]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2024.03.17-17.34.04:254][551]LogSavePackage: Moving output files for package: /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile
+[2024.03.17-17.34.04:256][551]LogSavePackage: Moving '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Saved/BP_Blue_ProjectileBF53E9204F76ED2D8BA56B974E89373B.tmp' to '../../../../../../Users/Rohaid/Documents/ue5-colors-r-everything/ColorsREverything/Content/Developers/Rohaid/BluePrints/BP_Blue_Projectile.uasset'
+[2024.03.17-17.34.04:284][551]LogFileHelpers: InternalPromptForCheckoutAndSave took 350 ms (total: 16.2 sec)
+[2024.03.17-17.34.04:297][551]AssetCheck: New page: Asset Save: BP_Blue_Projectile
+[2024.03.17-17.34.04:297][551]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/Developers/Rohaid/BluePrints/BP_Blue_Projectile.BP_Blue_Projectile
+[2024.03.17-17.34.05:861][632]BlueprintLog: New page: Compile BP_Blue_Projectile
+[2024.03.17-17.34.06:088][632]LogUObjectHash: Compacting FUObjectHashTables data took   3.74ms
+[2024.03.17-17.34.07:595][667]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.17-17.34.07:622][667]LogContentBundle: [Container: ThirdPersonMap] Generating Streaming for 0 Content Bundles.
+[2024.03.17-17.34.07:627][667]LogWorldPartition: Display: GenerateStreaming started...
+[2024.03.17-17.34.07:627][667]LogWorldPartition: Display: GetPartitionedActors started...
+[2024.03.17-17.34.07:627][667]LogWorldPartition: Display: GetPartitionedActors took 17 us (total: 1 ms)
+[2024.03.17-17.34.07:627][667]LogWorldPartition: Display: GenerateStreaming took 590 us (total: 17 ms)
+[2024.03.17-17.34.07:628][667]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.17-17.34.07:628][667]PIE: New page: PIE session: ThirdPersonMap (Mar 17, 2024, 9:34:07 AM)
+[2024.03.17-17.34.07:629][667]LogPlayLevel: Creating play world package: /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.34.07:642][667]LogPlayLevel: PIE: StaticDuplicateObject took: (0.013216s)
+[2024.03.17-17.34.07:642][667]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Maps/ThirdPersonMap.ThirdPersonMap to /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap (0.013323s)
+[2024.03.17-17.34.07:643][667]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.17-17.34.07:644][667]LogAIModule: Creating AISystem for world ThirdPersonMap
+[2024.03.17-17.34.07:646][667]LogWorldPartition: ULevel::OnLevelLoaded(ThirdPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, bIsValidLevelInstance=0, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=0)
+[2024.03.17-17.34.07:646][667]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.03.17-17.34.07:646][667]LogWorldPartition: UWorldPartition::Initialize(Asset=ThirdPersonMap, IsEditor=0, bPIEWorldTravel=0 IsGame=0, IsCooking=0)
+[2024.03.17-17.34.07:650][667]LogContentBundle: [Container: ThirdPersonMap] Creating new contrainer.
+[2024.03.17-17.34.07:650][667]LogWorldPartition: Display: WorldPartition initialize took 4 ms (total: 1.17 sec)
+[2024.03.17-17.34.07:650][667]LogPlayLevel: PIE: World Init took: (0.008107s)
+[2024.03.17-17.34.07:771][667]LogUObjectHash: Compacting FUObjectHashTables data took   5.04ms
+[2024.03.17-17.34.07:775][667]LogAudio: Display: Creating Audio Device:                 Id: 23, Scope: Unique, Realtime: True
+[2024.03.17-17.34.07:775][667]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.17-17.34.07:775][667]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.17-17.34.07:775][667]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.17-17.34.07:775][667]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.17-17.34.07:775][667]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.17-17.34.07:775][667]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.03.17-17.34.07:775][667]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.17-17.34.07:775][667]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.17-17.34.07:777][667]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.17-17.34.07:777][667]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.17-17.34.07:777][667]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.17-17.34.07:784][667]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.17-17.34.07:988][667]LogAudioMixer: Display: Using Audio Hardware Device Headphones (2- Realtek(R) Audio)
+[2024.03.17-17.34.07:989][667]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.17-17.34.07:989][667]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.17-17.34.07:989][667]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.17-17.34.07:991][667]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=23
+[2024.03.17-17.34.07:991][667]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=23
+[2024.03.17-17.34.07:995][667]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=23
+[2024.03.17-17.34.07:995][667]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=23
+[2024.03.17-17.34.07:995][667]LogInit: FAudioDevice initialized.
+[2024.03.17-17.34.07:995][667]LogAudio: Display: Audio Device (ID: 23) registered with world 'ThirdPersonMap'.
+[2024.03.17-17.34.08:001][667]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2024.03.17-17.34.08:008][667]LogWorld: Bringing World /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap up for play (max tick rate 60) at 2024.03.17-13.34.08
+[2024.03.17-17.34.08:009][667]LogWorld: Bringing up level for play took: 0.006731
+[2024.03.17-17.34.08:020][667]LogOnline: OSS: Created online subsystem instance for: :Context_34
+[2024.03.17-17.34.08:025][667]LogWorldPartition: New Streaming Source: PlayerController_0 -> Position: X=900.000 Y=1110.000 Z=92.013
+[2024.03.17-17.34.08:026][667]PIE: Server logged in
+[2024.03.17-17.34.08:028][667]PIE: Play in editor total start time 0.406 seconds.
+[2024.03.17-17.34.16:141][885]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.34.16:141][885]LogWorld: BeginTearingDown for /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.34.16:141][885]LogWorld: UWorld::CleanupWorld for ThirdPersonMap, bSessionEnded=true, bCleanupResources=true
+[2024.03.17-17.34.16:143][885]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.34.16:143][885]LogContentBundle: [Container: ThirdPersonMap] Deleting container.
+[2024.03.17-17.34.16:214][885]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.17-17.34.16:230][885]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.34.16:394][885]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.03.17-17.34.16:396][885]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=23
+[2024.03.17-17.34.16:403][885]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=23
+[2024.03.17-17.34.16:446][885]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.34.16:456][885]LogUObjectHash: Compacting FUObjectHashTables data took   5.21ms
+[2024.03.17-17.34.16:656][886]LogPlayLevel: Display: Destroying online subsystem :Context_34
+[2024.03.17-17.34.59:529][224]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.17-17.34.59:558][224]LogContentBundle: [Container: ThirdPersonMap] Generating Streaming for 0 Content Bundles.
+[2024.03.17-17.34.59:565][224]LogWorldPartition: Display: GenerateStreaming started...
+[2024.03.17-17.34.59:565][224]LogWorldPartition: Display: GetPartitionedActors started...
+[2024.03.17-17.34.59:565][224]LogWorldPartition: Display: GetPartitionedActors took 22 us (total: 1 ms)
+[2024.03.17-17.34.59:566][224]LogWorldPartition: Display: GenerateStreaming took 953 us (total: 18 ms)
+[2024.03.17-17.34.59:567][224]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.17-17.34.59:567][224]PIE: New page: PIE session: ThirdPersonMap (Mar 17, 2024, 9:34:59 AM)
+[2024.03.17-17.34.59:568][224]LogPlayLevel: Creating play world package: /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.34.59:586][224]LogPlayLevel: PIE: StaticDuplicateObject took: (0.018308s)
+[2024.03.17-17.34.59:586][224]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Maps/ThirdPersonMap.ThirdPersonMap to /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap (0.018414s)
+[2024.03.17-17.34.59:587][224]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.17-17.34.59:588][224]LogAIModule: Creating AISystem for world ThirdPersonMap
+[2024.03.17-17.34.59:589][224]LogWorldPartition: ULevel::OnLevelLoaded(ThirdPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, bIsValidLevelInstance=0, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=0)
+[2024.03.17-17.34.59:590][224]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.03.17-17.34.59:590][224]LogWorldPartition: UWorldPartition::Initialize(Asset=ThirdPersonMap, IsEditor=0, bPIEWorldTravel=0 IsGame=0, IsCooking=0)
+[2024.03.17-17.34.59:593][224]LogContentBundle: [Container: ThirdPersonMap] Creating new contrainer.
+[2024.03.17-17.34.59:593][224]LogWorldPartition: Display: WorldPartition initialize took 3 ms (total: 1.17 sec)
+[2024.03.17-17.34.59:593][224]LogPlayLevel: PIE: World Init took: (0.007068s)
+[2024.03.17-17.34.59:713][224]LogUObjectHash: Compacting FUObjectHashTables data took   5.30ms
+[2024.03.17-17.34.59:718][224]LogAudio: Display: Creating Audio Device:                 Id: 24, Scope: Unique, Realtime: True
+[2024.03.17-17.34.59:719][224]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.17-17.34.59:719][224]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.17-17.34.59:719][224]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.17-17.34.59:719][224]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.17-17.34.59:719][224]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.17-17.34.59:719][224]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.03.17-17.34.59:719][224]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.17-17.34.59:719][224]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.17-17.34.59:722][224]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.17-17.34.59:722][224]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.17-17.34.59:722][224]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.17-17.34.59:731][224]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.17-17.34.59:861][224]LogDerivedDataCache: C:/Users/Rohaid/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:05.947 and deleted 0 files with total size 0 MiB. Scanned 3168 files in 3146 folders with total size 73 MiB.
+[2024.03.17-17.35.00:003][224]LogAudioMixer: Display: Using Audio Hardware Device Headphones (2- Realtek(R) Audio)
+[2024.03.17-17.35.00:004][224]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.17-17.35.00:005][224]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.17-17.35.00:005][224]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.17-17.35.00:009][224]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=24
+[2024.03.17-17.35.00:009][224]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=24
+[2024.03.17-17.35.00:015][224]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=24
+[2024.03.17-17.35.00:015][224]LogInit: FAudioDevice initialized.
+[2024.03.17-17.35.00:015][224]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=24
+[2024.03.17-17.35.00:015][224]LogAudio: Display: Audio Device (ID: 24) registered with world 'ThirdPersonMap'.
+[2024.03.17-17.35.00:023][224]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2024.03.17-17.35.00:031][224]LogWorld: Bringing World /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap up for play (max tick rate 60) at 2024.03.17-13.35.00
+[2024.03.17-17.35.00:032][224]LogWorld: Bringing up level for play took: 0.008328
+[2024.03.17-17.35.00:040][224]LogOnline: OSS: Created online subsystem instance for: :Context_35
+[2024.03.17-17.35.00:048][224]LogWorldPartition: New Streaming Source: PlayerController_0 -> Position: X=900.000 Y=1110.000 Z=92.013
+[2024.03.17-17.35.00:049][224]PIE: Server logged in
+[2024.03.17-17.35.00:051][224]PIE: Play in editor total start time 0.493 seconds.
+[2024.03.17-17.35.50:820][640]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.35.50:820][640]LogWorld: BeginTearingDown for /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.35.50:820][640]LogWorld: UWorld::CleanupWorld for ThirdPersonMap, bSessionEnded=true, bCleanupResources=true
+[2024.03.17-17.35.50:821][640]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.35.50:821][640]LogContentBundle: [Container: ThirdPersonMap] Deleting container.
+[2024.03.17-17.35.50:867][640]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.17-17.35.50:878][640]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.35.51:010][640]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.35.51:011][640]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=24
+[2024.03.17-17.35.51:016][640]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=24
+[2024.03.17-17.35.51:059][640]LogUObjectHash: Compacting FUObjectHashTables data took   4.70ms
+[2024.03.17-17.35.51:198][641]LogPlayLevel: Display: Destroying online subsystem :Context_35
+[2024.03.17-17.36.07:956][986]LogHttp: Warning: 000006D76BCF9B00: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.36.07:956][986]LogHttp: Warning: 000006D76BCF9B00: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.36.07:956][986]LogHttp: Warning: 000006D76BCF9B00: libcurl info message cache 0 (Found bundle for host: 0x6d716970b40 [serially])
+[2024.03.17-17.36.07:956][986]LogHttp: Warning: 000006D76BCF9B00: libcurl info message cache 1 (Re-using existing connection #22 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.36.07:956][986]LogHttp: Warning: 000006D76BCF9B00: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (18.214.95.110) port 443 (#22))
+[2024.03.17-17.36.07:956][986]LogHttp: Warning: 000006D76BCF9B00: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.36.07:956][986]LogHttp: Warning: 000006D76BCF9B00: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-17.36.07:956][986]LogHttp: Warning: 000006D76BCF9B00: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.36.07:957][986]LogHttp: Warning: 000006D76BCF9B00: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-17.36.07:957][986]LogHttp: Warning: 000006D76BCF9B00: libcurl info message cache 7 (Closing connection 22)
+[2024.03.17-17.36.07:957][986]LogHttp: Warning: 000006D76BCF9B00: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.36.07:957][986]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-17.38.33:877][491]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.17-17.38.33:909][491]LogContentBundle: [Container: ThirdPersonMap] Generating Streaming for 0 Content Bundles.
+[2024.03.17-17.38.33:915][491]LogWorldPartition: Display: GenerateStreaming started...
+[2024.03.17-17.38.33:916][491]LogWorldPartition: Display: GetPartitionedActors started...
+[2024.03.17-17.38.33:916][491]LogWorldPartition: Display: GetPartitionedActors took 42 us (total: 1 ms)
+[2024.03.17-17.38.33:917][491]LogWorldPartition: Display: GenerateStreaming took 1 ms (total: 19 ms)
+[2024.03.17-17.38.33:917][491]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.17-17.38.33:918][491]PIE: New page: PIE session: ThirdPersonMap (Mar 17, 2024, 9:38:33 AM)
+[2024.03.17-17.38.33:919][491]LogPlayLevel: Creating play world package: /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.38.33:938][491]LogPlayLevel: PIE: StaticDuplicateObject took: (0.018671s)
+[2024.03.17-17.38.33:938][491]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Maps/ThirdPersonMap.ThirdPersonMap to /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap (0.018824s)
+[2024.03.17-17.38.33:938][491]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.17-17.38.33:940][491]LogAIModule: Creating AISystem for world ThirdPersonMap
+[2024.03.17-17.38.33:943][491]LogWorldPartition: ULevel::OnLevelLoaded(ThirdPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, bIsValidLevelInstance=0, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=0)
+[2024.03.17-17.38.33:943][491]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.03.17-17.38.33:943][491]LogWorldPartition: UWorldPartition::Initialize(Asset=ThirdPersonMap, IsEditor=0, bPIEWorldTravel=0 IsGame=0, IsCooking=0)
+[2024.03.17-17.38.33:948][491]LogContentBundle: [Container: ThirdPersonMap] Creating new contrainer.
+[2024.03.17-17.38.33:948][491]LogWorldPartition: Display: WorldPartition initialize took 5 ms (total: 1.18 sec)
+[2024.03.17-17.38.33:948][491]LogPlayLevel: PIE: World Init took: (0.010600s)
+[2024.03.17-17.38.34:102][491]LogUObjectHash: Compacting FUObjectHashTables data took   5.60ms
+[2024.03.17-17.38.34:106][491]LogAudio: Display: Creating Audio Device:                 Id: 25, Scope: Unique, Realtime: True
+[2024.03.17-17.38.34:107][491]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.17-17.38.34:107][491]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.17-17.38.34:107][491]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.17-17.38.34:107][491]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.17-17.38.34:107][491]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.17-17.38.34:107][491]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.03.17-17.38.34:107][491]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.17-17.38.34:107][491]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.17-17.38.34:108][491]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.17-17.38.34:108][491]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.17-17.38.34:108][491]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.17-17.38.34:115][491]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.17-17.38.34:374][491]LogAudioMixer: Display: Using Audio Hardware Device Headphones (2- Realtek(R) Audio)
+[2024.03.17-17.38.34:374][491]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.17-17.38.34:375][491]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.17-17.38.34:375][491]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.17-17.38.34:377][491]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=25
+[2024.03.17-17.38.34:377][491]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=25
+[2024.03.17-17.38.34:383][491]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=25
+[2024.03.17-17.38.34:383][491]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=25
+[2024.03.17-17.38.34:383][491]LogInit: FAudioDevice initialized.
+[2024.03.17-17.38.34:383][491]LogAudio: Display: Audio Device (ID: 25) registered with world 'ThirdPersonMap'.
+[2024.03.17-17.38.34:391][491]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2024.03.17-17.38.34:397][491]LogWorld: Bringing World /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap up for play (max tick rate 60) at 2024.03.17-13.38.34
+[2024.03.17-17.38.34:397][491]LogWorld: Bringing up level for play took: 0.005802
+[2024.03.17-17.38.34:406][491]LogOnline: OSS: Created online subsystem instance for: :Context_36
+[2024.03.17-17.38.34:412][491]LogWorldPartition: New Streaming Source: PlayerController_0 -> Position: X=900.000 Y=1110.000 Z=92.013
+[2024.03.17-17.38.34:413][491]PIE: Server logged in
+[2024.03.17-17.38.34:416][491]PIE: Play in editor total start time 0.508 seconds.
+[2024.03.17-17.39.07:088][412]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.39.07:089][412]LogWorld: BeginTearingDown for /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.39.07:089][412]LogWorld: UWorld::CleanupWorld for ThirdPersonMap, bSessionEnded=true, bCleanupResources=true
+[2024.03.17-17.39.07:090][412]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.39.07:090][412]LogContentBundle: [Container: ThirdPersonMap] Deleting container.
+[2024.03.17-17.39.07:142][412]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.17-17.39.07:158][412]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.39.07:288][412]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.39.07:290][412]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=25
+[2024.03.17-17.39.07:294][412]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=25
+[2024.03.17-17.39.07:327][412]LogUObjectHash: Compacting FUObjectHashTables data took   4.01ms
+[2024.03.17-17.39.07:520][413]LogPlayLevel: Display: Destroying online subsystem :Context_36
+[2024.03.17-17.39.07:632][414]LogHttp: Warning: 000006D77473A000: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.39.07:632][414]LogHttp: Warning: 000006D77473A000: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.39.07:633][414]LogHttp: Warning: 000006D77473A000: libcurl info message cache 0 (Found bundle for host: 0x6d716970780 [serially])
+[2024.03.17-17.39.07:633][414]LogHttp: Warning: 000006D77473A000: libcurl info message cache 1 (Re-using existing connection #23 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.39.07:633][414]LogHttp: Warning: 000006D77473A000: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (54.83.111.215) port 443 (#23))
+[2024.03.17-17.39.07:633][414]LogHttp: Warning: 000006D77473A000: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.39.07:633][414]LogHttp: Warning: 000006D77473A000: libcurl info message cache 4 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.39.07:633][414]LogHttp: Warning: 000006D77473A000: libcurl info message cache 5 (necessary data rewind wasn't possible)
+[2024.03.17-17.39.07:633][414]LogHttp: Warning: 000006D77473A000: libcurl info message cache 6 (Closing connection 23)
+[2024.03.17-17.39.07:633][414]LogHttp: Warning: 000006D77473A000: libcurl info message cache 7 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.39.07:633][414]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-17.40.11:191][271]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2024.03.17-17.40.11:231][271]LogContentBundle: [Container: ThirdPersonMap] Generating Streaming for 0 Content Bundles.
+[2024.03.17-17.40.11:240][271]LogWorldPartition: Display: GenerateStreaming started...
+[2024.03.17-17.40.11:240][271]LogWorldPartition: Display: GetPartitionedActors started...
+[2024.03.17-17.40.11:240][271]LogWorldPartition: Display: GetPartitionedActors took 32 us (total: 1 ms)
+[2024.03.17-17.40.11:241][271]LogWorldPartition: Display: GenerateStreaming took 1 ms (total: 20 ms)
+[2024.03.17-17.40.11:242][271]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.03.17-17.40.11:242][271]PIE: New page: PIE session: ThirdPersonMap (Mar 17, 2024, 9:40:11 AM)
+[2024.03.17-17.40.11:242][271]LogPlayLevel: Creating play world package: /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.40.11:263][271]LogPlayLevel: PIE: StaticDuplicateObject took: (0.020808s)
+[2024.03.17-17.40.11:263][271]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/ThirdPerson/Maps/ThirdPersonMap.ThirdPersonMap to /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap (0.020937s)
+[2024.03.17-17.40.11:264][271]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.03.17-17.40.11:265][271]LogAIModule: Creating AISystem for world ThirdPersonMap
+[2024.03.17-17.40.11:267][271]LogWorldPartition: ULevel::OnLevelLoaded(ThirdPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, bIsValidLevelInstance=0, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=0)
+[2024.03.17-17.40.11:268][271]LogWorldPartition: Display: WorldPartition initialize started...
+[2024.03.17-17.40.11:268][271]LogWorldPartition: UWorldPartition::Initialize(Asset=ThirdPersonMap, IsEditor=0, bPIEWorldTravel=0 IsGame=0, IsCooking=0)
+[2024.03.17-17.40.11:273][271]LogContentBundle: [Container: ThirdPersonMap] Creating new contrainer.
+[2024.03.17-17.40.11:273][271]LogWorldPartition: Display: WorldPartition initialize took 5 ms (total: 1.18 sec)
+[2024.03.17-17.40.11:273][271]LogPlayLevel: PIE: World Init took: (0.010335s)
+[2024.03.17-17.40.11:419][271]LogUObjectHash: Compacting FUObjectHashTables data took   4.71ms
+[2024.03.17-17.40.11:423][271]LogAudio: Display: Creating Audio Device:                 Id: 26, Scope: Unique, Realtime: True
+[2024.03.17-17.40.11:423][271]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.03.17-17.40.11:423][271]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.03.17-17.40.11:423][271]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.03.17-17.40.11:424][271]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.03.17-17.40.11:424][271]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2024.03.17-17.40.11:424][271]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.03.17-17.40.11:424][271]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2024.03.17-17.40.11:424][271]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.03.17-17.40.11:425][271]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.03.17-17.40.11:425][271]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.03.17-17.40.11:425][271]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.03.17-17.40.11:432][271]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.03.17-17.40.11:667][271]LogAudioMixer: Display: Using Audio Hardware Device Headphones (2- Realtek(R) Audio)
+[2024.03.17-17.40.11:668][271]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.03.17-17.40.11:668][271]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.03.17-17.40.11:668][271]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.03.17-17.40.11:670][271]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=26
+[2024.03.17-17.40.11:670][271]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=26
+[2024.03.17-17.40.11:675][271]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=26
+[2024.03.17-17.40.11:675][271]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=26
+[2024.03.17-17.40.11:675][271]LogInit: FAudioDevice initialized.
+[2024.03.17-17.40.11:676][271]LogAudio: Display: Audio Device (ID: 26) registered with world 'ThirdPersonMap'.
+[2024.03.17-17.40.11:681][271]LogLoad: Game class is 'BP_ThirdPersonGameMode_C'
+[2024.03.17-17.40.11:689][271]LogWorld: Bringing World /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap.ThirdPersonMap up for play (max tick rate 60) at 2024.03.17-13.40.11
+[2024.03.17-17.40.11:690][271]LogWorld: Bringing up level for play took: 0.007900
+[2024.03.17-17.40.11:696][271]LogOnline: OSS: Created online subsystem instance for: :Context_37
+[2024.03.17-17.40.11:702][271]LogWorldPartition: New Streaming Source: PlayerController_0 -> Position: X=900.000 Y=1110.000 Z=92.013
+[2024.03.17-17.40.11:703][271]PIE: Server logged in
+[2024.03.17-17.40.11:706][271]PIE: Play in editor total start time 0.475 seconds.
+[2024.03.17-17.41.30:331][ 49]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.41.30:331][ 49]LogWorld: BeginTearingDown for /Game/ThirdPerson/Maps/UEDPIE_0_ThirdPersonMap
+[2024.03.17-17.41.30:332][ 49]LogWorld: UWorld::CleanupWorld for ThirdPersonMap, bSessionEnded=true, bCleanupResources=true
+[2024.03.17-17.41.30:333][ 49]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.41.30:334][ 49]LogContentBundle: [Container: ThirdPersonMap] Deleting container.
+[2024.03.17-17.41.30:417][ 49]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.03.17-17.41.30:433][ 49]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.03.17-17.41.30:603][ 49]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.03.17-17.41.30:605][ 49]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=26
+[2024.03.17-17.41.30:611][ 49]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=26
+[2024.03.17-17.41.30:670][ 49]LogUObjectHash: Compacting FUObjectHashTables data took   6.74ms
+[2024.03.17-17.41.30:922][ 50]LogPlayLevel: Display: Destroying online subsystem :Context_37
+[2024.03.17-17.42.07:833][268]LogHttp: Warning: 000006D774E60500: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.42.07:833][268]LogHttp: Warning: 000006D774E60500: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.42.07:833][268]LogHttp: Warning: 000006D774E60500: libcurl info message cache 0 (Found bundle for host: 0x6d716970ba0 [serially])
+[2024.03.17-17.42.07:833][268]LogHttp: Warning: 000006D774E60500: libcurl info message cache 1 (Re-using existing connection #24 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.42.07:833][268]LogHttp: Warning: 000006D774E60500: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (34.239.37.15) port 443 (#24))
+[2024.03.17-17.42.07:833][268]LogHttp: Warning: 000006D774E60500: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.42.07:833][268]LogHttp: Warning: 000006D774E60500: libcurl info message cache 4 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.42.07:833][268]LogHttp: Warning: 000006D774E60500: libcurl info message cache 5 (necessary data rewind wasn't possible)
+[2024.03.17-17.42.07:833][268]LogHttp: Warning: 000006D774E60500: libcurl info message cache 6 (Closing connection 24)
+[2024.03.17-17.42.07:833][268]LogHttp: Warning: 000006D774E60500: libcurl info message cache 7 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.42.07:833][268]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-17.45.07:896][808]LogHttp: Warning: 000006D774E6A500: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.45.07:896][808]LogHttp: Warning: 000006D774E6A500: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.45.07:896][808]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 0 (Found bundle for host: 0x6d716970c30 [serially])
+[2024.03.17-17.45.07:896][808]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 1 (Re-using existing connection #25 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.45.07:896][808]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (3.217.3.240) port 443 (#25))
+[2024.03.17-17.45.07:896][808]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.45.07:896][808]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-17.45.07:896][808]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.45.07:896][808]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-17.45.07:896][808]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 7 (Closing connection 25)
+[2024.03.17-17.45.07:896][808]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.45.07:896][808]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-17.48.07:951][348]LogHttp: Warning: 000006D774E65A00: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.48.07:951][348]LogHttp: Warning: 000006D774E65A00: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.48.07:951][348]LogHttp: Warning: 000006D774E65A00: libcurl info message cache 0 (Found bundle for host: 0x6d716970e40 [serially])
+[2024.03.17-17.48.07:951][348]LogHttp: Warning: 000006D774E65A00: libcurl info message cache 1 (Re-using existing connection #26 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.48.07:951][348]LogHttp: Warning: 000006D774E65A00: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (44.194.101.41) port 443 (#26))
+[2024.03.17-17.48.07:951][348]LogHttp: Warning: 000006D774E65A00: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.48.07:951][348]LogHttp: Warning: 000006D774E65A00: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-17.48.07:951][348]LogHttp: Warning: 000006D774E65A00: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.48.07:951][348]LogHttp: Warning: 000006D774E65A00: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-17.48.07:951][348]LogHttp: Warning: 000006D774E65A00: libcurl info message cache 7 (Closing connection 26)
+[2024.03.17-17.48.07:951][348]LogHttp: Warning: 000006D774E65A00: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.48.07:951][348]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-17.51.07:674][887]LogHttp: Warning: 000006D774E6DC00: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.51.07:674][887]LogHttp: Warning: 000006D774E6DC00: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.51.07:674][887]LogHttp: Warning: 000006D774E6DC00: libcurl info message cache 0 (Found bundle for host: 0x6d7169700c0 [serially])
+[2024.03.17-17.51.07:674][887]LogHttp: Warning: 000006D774E6DC00: libcurl info message cache 1 (Re-using existing connection #27 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.51.07:674][887]LogHttp: Warning: 000006D774E6DC00: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (23.20.216.3) port 443 (#27))
+[2024.03.17-17.51.07:674][887]LogHttp: Warning: 000006D774E6DC00: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.51.07:674][887]LogHttp: Warning: 000006D774E6DC00: libcurl info message cache 4 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.51.07:674][887]LogHttp: Warning: 000006D774E6DC00: libcurl info message cache 5 (necessary data rewind wasn't possible)
+[2024.03.17-17.51.07:674][887]LogHttp: Warning: 000006D774E6DC00: libcurl info message cache 6 (Closing connection 27)
+[2024.03.17-17.51.07:674][887]LogHttp: Warning: 000006D774E6DC00: libcurl info message cache 7 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.51.07:674][887]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-17.55.07:712][607]LogHttp: Warning: 000006D774E62300: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-17.55.07:712][607]LogHttp: Warning: 000006D774E62300: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-17.55.07:712][607]LogHttp: Warning: 000006D774E62300: libcurl info message cache 0 (Found bundle for host: 0x6d7169703c0 [serially])
+[2024.03.17-17.55.07:712][607]LogHttp: Warning: 000006D774E62300: libcurl info message cache 1 (Re-using existing connection #28 with host datarouter.ol.epicgames.com)
+[2024.03.17-17.55.07:712][607]LogHttp: Warning: 000006D774E62300: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (34.202.42.202) port 443 (#28))
+[2024.03.17-17.55.07:712][607]LogHttp: Warning: 000006D774E62300: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-17.55.07:712][607]LogHttp: Warning: 000006D774E62300: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-17.55.07:712][607]LogHttp: Warning: 000006D774E62300: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-17.55.07:712][607]LogHttp: Warning: 000006D774E62300: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-17.55.07:712][607]LogHttp: Warning: 000006D774E62300: libcurl info message cache 7 (Closing connection 28)
+[2024.03.17-17.55.07:712][607]LogHttp: Warning: 000006D774E62300: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-17.55.07:713][607]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-18.00.07:740][507]LogHttp: Warning: 000006D774E64100: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-18.00.07:740][507]LogHttp: Warning: 000006D774E64100: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-18.00.07:740][507]LogHttp: Warning: 000006D774E64100: libcurl info message cache 0 (Found bundle for host: 0x6d7169708a0 [serially])
+[2024.03.17-18.00.07:740][507]LogHttp: Warning: 000006D774E64100: libcurl info message cache 1 (Re-using existing connection #29 with host datarouter.ol.epicgames.com)
+[2024.03.17-18.00.07:740][507]LogHttp: Warning: 000006D774E64100: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (35.172.3.149) port 443 (#29))
+[2024.03.17-18.00.07:740][507]LogHttp: Warning: 000006D774E64100: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-18.00.07:740][507]LogHttp: Warning: 000006D774E64100: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-18.00.07:740][507]LogHttp: Warning: 000006D774E64100: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-18.00.07:740][507]LogHttp: Warning: 000006D774E64100: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-18.00.07:740][507]LogHttp: Warning: 000006D774E64100: libcurl info message cache 7 (Closing connection 29)
+[2024.03.17-18.00.07:740][507]LogHttp: Warning: 000006D774E64100: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-18.00.07:740][507]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-18.03.07:764][ 47]LogHttp: Warning: 000006D774E6AA00: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-18.03.07:764][ 47]LogHttp: Warning: 000006D774E6AA00: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-18.03.07:764][ 47]LogHttp: Warning: 000006D774E6AA00: libcurl info message cache 0 (Found bundle for host: 0x6d716970600 [serially])
+[2024.03.17-18.03.07:764][ 47]LogHttp: Warning: 000006D774E6AA00: libcurl info message cache 1 (Re-using existing connection #30 with host datarouter.ol.epicgames.com)
+[2024.03.17-18.03.07:764][ 47]LogHttp: Warning: 000006D774E6AA00: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (35.171.37.243) port 443 (#30))
+[2024.03.17-18.03.07:764][ 47]LogHttp: Warning: 000006D774E6AA00: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-18.03.07:764][ 47]LogHttp: Warning: 000006D774E6AA00: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-18.03.07:764][ 47]LogHttp: Warning: 000006D774E6AA00: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-18.03.07:764][ 47]LogHttp: Warning: 000006D774E6AA00: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-18.03.07:764][ 47]LogHttp: Warning: 000006D774E6AA00: libcurl info message cache 7 (Closing connection 30)
+[2024.03.17-18.03.07:764][ 47]LogHttp: Warning: 000006D774E6AA00: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-18.03.07:764][ 47]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-18.07.07:827][767]LogHttp: Warning: 000006D774E60A00: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-18.07.07:827][767]LogHttp: Warning: 000006D774E60A00: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-18.07.07:827][767]LogHttp: Warning: 000006D774E60A00: libcurl info message cache 0 (Found bundle for host: 0x6d716970a50 [serially])
+[2024.03.17-18.07.07:828][767]LogHttp: Warning: 000006D774E60A00: libcurl info message cache 1 (Re-using existing connection #31 with host datarouter.ol.epicgames.com)
+[2024.03.17-18.07.07:828][767]LogHttp: Warning: 000006D774E60A00: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (3.230.210.229) port 443 (#31))
+[2024.03.17-18.07.07:828][767]LogHttp: Warning: 000006D774E60A00: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-18.07.07:828][767]LogHttp: Warning: 000006D774E60A00: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-18.07.07:828][767]LogHttp: Warning: 000006D774E60A00: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-18.07.07:828][767]LogHttp: Warning: 000006D774E60A00: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-18.07.07:828][767]LogHttp: Warning: 000006D774E60A00: libcurl info message cache 7 (Closing connection 31)
+[2024.03.17-18.07.07:828][767]LogHttp: Warning: 000006D774E60A00: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-18.07.07:828][767]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-18.13.07:894][847]LogHttp: Warning: 000006D774E65500: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-18.13.07:894][847]LogHttp: Warning: 000006D774E65500: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-18.13.07:895][847]LogHttp: Warning: 000006D774E65500: libcurl info message cache 0 (Found bundle for host: 0x6d7169704e0 [serially])
+[2024.03.17-18.13.07:895][847]LogHttp: Warning: 000006D774E65500: libcurl info message cache 1 (Re-using existing connection #32 with host datarouter.ol.epicgames.com)
+[2024.03.17-18.13.07:895][847]LogHttp: Warning: 000006D774E65500: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (35.170.20.58) port 443 (#32))
+[2024.03.17-18.13.07:895][847]LogHttp: Warning: 000006D774E65500: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-18.13.07:895][847]LogHttp: Warning: 000006D774E65500: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-18.13.07:895][847]LogHttp: Warning: 000006D774E65500: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-18.13.07:895][847]LogHttp: Warning: 000006D774E65500: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-18.13.07:895][847]LogHttp: Warning: 000006D774E65500: libcurl info message cache 7 (Closing connection 32)
+[2024.03.17-18.13.07:895][847]LogHttp: Warning: 000006D774E65500: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-18.13.07:895][847]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-18.16.09:153][387]LogHttp: Warning: 000006D774E64600: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-18.16.09:153][387]LogHttp: Warning: 000006D774E64600: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-18.16.09:154][387]LogHttp: Warning: 000006D774E64600: libcurl info message cache 0 (Found bundle for host: 0x6d716970960 [serially])
+[2024.03.17-18.16.09:154][387]LogHttp: Warning: 000006D774E64600: libcurl info message cache 1 (Re-using existing connection #33 with host datarouter.ol.epicgames.com)
+[2024.03.17-18.16.09:154][387]LogHttp: Warning: 000006D774E64600: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (52.73.66.167) port 443 (#33))
+[2024.03.17-18.16.09:154][387]LogHttp: Warning: 000006D774E64600: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-18.16.09:154][387]LogHttp: Warning: 000006D774E64600: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-18.16.09:154][387]LogHttp: Warning: 000006D774E64600: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-18.16.09:154][387]LogHttp: Warning: 000006D774E64600: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-18.16.09:154][387]LogHttp: Warning: 000006D774E64600: libcurl info message cache 7 (Closing connection 33)
+[2024.03.17-18.16.09:154][387]LogHttp: Warning: 000006D774E64600: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-18.16.09:154][387]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-18.23.08:905][646]LogHttp: Warning: 000006D774E68C00: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-18.23.08:905][646]LogHttp: Warning: 000006D774E68C00: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-18.23.08:905][646]LogHttp: Warning: 000006D774E68C00: libcurl info message cache 0 (Found bundle for host: 0x6d7169704b0 [serially])
+[2024.03.17-18.23.08:905][646]LogHttp: Warning: 000006D774E68C00: libcurl info message cache 1 (Re-using existing connection #34 with host datarouter.ol.epicgames.com)
+[2024.03.17-18.23.08:905][646]LogHttp: Warning: 000006D774E68C00: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (34.239.90.94) port 443 (#34))
+[2024.03.17-18.23.08:905][646]LogHttp: Warning: 000006D774E68C00: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-18.23.08:906][646]LogHttp: Warning: 000006D774E68C00: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-18.23.08:906][646]LogHttp: Warning: 000006D774E68C00: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-18.23.08:906][646]LogHttp: Warning: 000006D774E68C00: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-18.23.08:906][646]LogHttp: Warning: 000006D774E68C00: libcurl info message cache 7 (Closing connection 34)
+[2024.03.17-18.23.08:906][646]LogHttp: Warning: 000006D774E68C00: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-18.23.08:906][646]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-18.33.09:058][446]LogHttp: Warning: 000006D774E6A500: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-18.33.09:058][446]LogHttp: Warning: 000006D774E6A500: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-18.33.09:059][446]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 0 (Found bundle for host: 0x6d716970960 [serially])
+[2024.03.17-18.33.09:059][446]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 1 (Re-using existing connection #35 with host datarouter.ol.epicgames.com)
+[2024.03.17-18.33.09:059][446]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (18.210.4.173) port 443 (#35))
+[2024.03.17-18.33.09:059][446]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-18.33.09:059][446]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-18.33.09:059][446]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-18.33.09:059][446]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-18.33.09:059][446]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 7 (Closing connection 35)
+[2024.03.17-18.33.09:059][446]LogHttp: Warning: 000006D774E6A500: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-18.33.09:059][446]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-18.35.01:224][782]LogDerivedDataCache: C:/Users/Rohaid/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:06.113 and deleted 0 files with total size 0 MiB. Scanned 3168 files in 3146 folders with total size 73 MiB.
+[2024.03.17-18.47.08:912][965]LogHttp: Warning: 000006D774E62D00: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-18.47.08:912][965]LogHttp: Warning: 000006D774E62D00: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-18.47.08:912][965]LogHttp: Warning: 000006D774E62D00: libcurl info message cache 0 (Found bundle for host: 0x6d7169708d0 [serially])
+[2024.03.17-18.47.08:912][965]LogHttp: Warning: 000006D774E62D00: libcurl info message cache 1 (Re-using existing connection #36 with host datarouter.ol.epicgames.com)
+[2024.03.17-18.47.08:912][965]LogHttp: Warning: 000006D774E62D00: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (35.169.126.79) port 443 (#36))
+[2024.03.17-18.47.08:912][965]LogHttp: Warning: 000006D774E62D00: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-18.47.08:912][965]LogHttp: Warning: 000006D774E62D00: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-18.47.08:912][965]LogHttp: Warning: 000006D774E62D00: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-18.47.08:912][965]LogHttp: Warning: 000006D774E62D00: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-18.47.08:912][965]LogHttp: Warning: 000006D774E62D00: libcurl info message cache 7 (Closing connection 36)
+[2024.03.17-18.47.08:912][965]LogHttp: Warning: 000006D774E62D00: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-18.47.08:912][965]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-18.58.09:423][946]LogHttp: Warning: 000006D774E6B900: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-18.58.09:423][946]LogHttp: Warning: 000006D774E6B900: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-18.58.09:423][946]LogHttp: Warning: 000006D774E6B900: libcurl info message cache 0 (Found bundle for host: 0x6d7169709f0 [serially])
+[2024.03.17-18.58.09:423][946]LogHttp: Warning: 000006D774E6B900: libcurl info message cache 1 (Re-using existing connection #37 with host datarouter.ol.epicgames.com)
+[2024.03.17-18.58.09:423][946]LogHttp: Warning: 000006D774E6B900: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (3.224.219.55) port 443 (#37))
+[2024.03.17-18.58.09:423][946]LogHttp: Warning: 000006D774E6B900: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-18.58.09:423][946]LogHttp: Warning: 000006D774E6B900: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-18.58.09:423][946]LogHttp: Warning: 000006D774E6B900: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-18.58.09:423][946]LogHttp: Warning: 000006D774E6B900: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-18.58.09:423][946]LogHttp: Warning: 000006D774E6B900: libcurl info message cache 7 (Closing connection 37)
+[2024.03.17-18.58.09:423][946]LogHttp: Warning: 000006D774E6B900: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-18.58.09:423][946]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-19.09.08:940][924]LogHttp: Warning: 000006D774E62800: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-19.09.08:940][924]LogHttp: Warning: 000006D774E62800: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-19.09.08:940][924]LogHttp: Warning: 000006D774E62800: libcurl info message cache 0 (Found bundle for host: 0x6d716970000 [serially])
+[2024.03.17-19.09.08:940][924]LogHttp: Warning: 000006D774E62800: libcurl info message cache 1 (Re-using existing connection #38 with host datarouter.ol.epicgames.com)
+[2024.03.17-19.09.08:940][924]LogHttp: Warning: 000006D774E62800: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (54.157.10.6) port 443 (#38))
+[2024.03.17-19.09.08:940][924]LogHttp: Warning: 000006D774E62800: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-19.09.08:940][924]LogHttp: Warning: 000006D774E62800: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-19.09.08:940][924]LogHttp: Warning: 000006D774E62800: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-19.09.08:940][924]LogHttp: Warning: 000006D774E62800: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-19.09.08:940][924]LogHttp: Warning: 000006D774E62800: libcurl info message cache 7 (Closing connection 38)
+[2024.03.17-19.09.08:940][924]LogHttp: Warning: 000006D774E62800: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-19.09.08:940][924]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-19.35.00:321][576]LogDerivedDataCache: C:/Users/Rohaid/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:05.209 and deleted 0 files with total size 0 MiB. Scanned 3168 files in 3146 folders with total size 73 MiB.
+[2024.03.17-19.47.08:874][762]LogHttp: Warning: 000006D774E65500: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-19.47.08:874][762]LogHttp: Warning: 000006D774E65500: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-19.47.08:874][762]LogHttp: Warning: 000006D774E65500: libcurl info message cache 0 (Found bundle for host: 0x6d716970c00 [serially])
+[2024.03.17-19.47.08:874][762]LogHttp: Warning: 000006D774E65500: libcurl info message cache 1 (Re-using existing connection #39 with host datarouter.ol.epicgames.com)
+[2024.03.17-19.47.08:874][762]LogHttp: Warning: 000006D774E65500: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (34.230.171.76) port 443 (#39))
+[2024.03.17-19.47.08:874][762]LogHttp: Warning: 000006D774E65500: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-19.47.08:874][762]LogHttp: Warning: 000006D774E65500: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-19.47.08:874][762]LogHttp: Warning: 000006D774E65500: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-19.47.08:874][762]LogHttp: Warning: 000006D774E65500: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-19.47.08:874][762]LogHttp: Warning: 000006D774E65500: libcurl info message cache 7 (Closing connection 39)
+[2024.03.17-19.47.08:874][762]LogHttp: Warning: 000006D774E65500: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-19.47.08:874][762]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-19.51.09:056][482]LogHttp: Warning: 000006D774E60000: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-19.51.09:057][482]LogHttp: Warning: 000006D774E60000: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-19.51.09:057][482]LogHttp: Warning: 000006D774E60000: libcurl info message cache 0 (Found bundle for host: 0x6d716970720 [serially])
+[2024.03.17-19.51.09:057][482]LogHttp: Warning: 000006D774E60000: libcurl info message cache 1 (Re-using existing connection #40 with host datarouter.ol.epicgames.com)
+[2024.03.17-19.51.09:057][482]LogHttp: Warning: 000006D774E60000: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (18.205.13.153) port 443 (#40))
+[2024.03.17-19.51.09:057][482]LogHttp: Warning: 000006D774E60000: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-19.51.09:057][482]LogHttp: Warning: 000006D774E60000: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-19.51.09:057][482]LogHttp: Warning: 000006D774E60000: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-19.51.09:057][482]LogHttp: Warning: 000006D774E60000: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-19.51.09:057][482]LogHttp: Warning: 000006D774E60000: libcurl info message cache 7 (Closing connection 40)
+[2024.03.17-19.51.09:057][482]LogHttp: Warning: 000006D774E60000: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-19.51.09:057][482]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2024.03.17-19.54.09:127][522]LogHttp: Warning: 000006D77474AF00: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: 0, actual payload size: 0
+[2024.03.17-19.54.09:127][522]LogHttp: Warning: 000006D77474AF00: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2024.03.17-19.54.09:127][522]LogHttp: Warning: 000006D77474AF00: libcurl info message cache 0 (Found bundle for host: 0x6d716970780 [serially])
+[2024.03.17-19.54.09:127][522]LogHttp: Warning: 000006D77474AF00: libcurl info message cache 1 (Re-using existing connection #41 with host datarouter.ol.epicgames.com)
+[2024.03.17-19.54.09:127][522]LogHttp: Warning: 000006D77474AF00: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (34.194.193.176) port 443 (#41))
+[2024.03.17-19.54.09:127][522]LogHttp: Warning: 000006D77474AF00: libcurl info message cache 3 (We are completely uploaded and fine)
+[2024.03.17-19.54.09:127][522]LogHttp: Warning: 000006D77474AF00: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, close notify (256):)
+[2024.03.17-19.54.09:127][522]LogHttp: Warning: 000006D77474AF00: libcurl info message cache 5 (Connection died, retrying a fresh connect (retry count: 1))
+[2024.03.17-19.54.09:127][522]LogHttp: Warning: 000006D77474AF00: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2024.03.17-19.54.09:127][522]LogHttp: Warning: 000006D77474AF00: libcurl info message cache 7 (Closing connection 41)
+[2024.03.17-19.54.09:127][522]LogHttp: Warning: 000006D77474AF00: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, close notify (256):)
+[2024.03.17-19.54.09:127][522]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B65B9B017-4833-7D10-34B3-DAA7E059F9A3%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.1.1-23901901%2B%2B%2BUE5%2BRelease-5.1&UserID=2be1c65c4a1473e73f86a3bc7809b1af%7C193782dfde9d4dffbe9a74ffed3a4bd6%7C78b692b0-3437-4727-b62f-0a19be8f5003&AppEnvironment=datacollector-binary&UploadType=eteventstream
